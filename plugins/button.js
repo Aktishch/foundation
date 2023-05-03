@@ -16,7 +16,7 @@ module.exports = plugin(
         '--btn-accent': theme('colors.white.DEFAULT'),
         color: 'var(--btn-color)',
         fontSize: theme('fontSize.16'),
-        fontWeight: 600,
+        fontWeight: 500,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -136,7 +136,7 @@ module.exports = plugin(
 
           return {
 
-            borderRadius: '6px',
+            borderRadius: '100px',
             height: size,
             paddingInline: `calc(${size} / 2)`
 

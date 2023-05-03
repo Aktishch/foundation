@@ -8,9 +8,6 @@ const createAnimations = () => {
   {
 
     const header = document.querySelector('*[data-header]')
-    const smoothContent = document.querySelector('#smooth-content')
-
-    smoothContent.style.paddingTop = `${header.offsetHeight}px`
 
     const scrollHeader = gsap.from(header, {
 
@@ -24,8 +21,6 @@ const createAnimations = () => {
 
       start: 'top top',
       onUpdate: (self) => {
-
-        smoothContent.style.paddingTop = `${header.offsetHeight}px`
 
         if (self.direction === -1) {
 
@@ -57,7 +52,7 @@ const createAnimations = () => {
 
           y: 100,
           opacity: 0
-          
+
         })
 
       }
@@ -68,7 +63,7 @@ const createAnimations = () => {
 
           y: -100,
           opacity: 0
-          
+
         })
 
       }
@@ -79,7 +74,7 @@ const createAnimations = () => {
 
           x: 100,
           opacity: 0
-          
+
         })
 
       }
@@ -90,7 +85,7 @@ const createAnimations = () => {
 
           x: -100,
           opacity: 0
-          
+
         })
 
       }

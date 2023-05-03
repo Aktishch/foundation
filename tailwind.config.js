@@ -10,8 +10,6 @@ module.exports = {
 
   ],
 
-  darkMode: 'class',
-
   corePlugins: {
 
     container: false
@@ -34,42 +32,32 @@ module.exports = {
     colors: {
 
       primary: {
-        DEFAULT: '#af1a4c',
-        dark: '#831339'
-      },
-
-      second: {
-        DEFAULT: '#d7a751',
-        dark: '#c7902e'
+        DEFAULT: '#0084E6',
+        dark: '#0067b3'
       },
 
       black: {
-        DEFAULT: '#000000'
+        DEFAULT: '#001B37'
       },
 
       white: {
-        DEFAULT: '#ffffff'
+        DEFAULT: '#FFFFFF'
       },
 
       gray: {
-        DEFAULT: '#b2b2b2',
-        dark: '#999'
+        DEFAULT: '#D9D9D9'
       },
 
       grey: {
-        DEFAULT: '#f6f7f9'
+        DEFAULT: '#F1F5F9'
       },
 
-      dark: {
-        DEFAULT: '#303030'
+      peach: {
+        DEFAULT: '#EE9F73'
       },
 
-      red: {
-        DEFAULT: '#be1b1b'
-      },
-
-      green: {
-        DEFAULT: '#27ae60'
+      orange: {
+        DEFAULT: '#F1683B'
       }
 
     },
@@ -225,7 +213,7 @@ module.exports = {
       xs: '28px',
       sm: '36px',
       md: '40px',
-      lg: '45px',
+      lg: '52px',
       xl: '56px',
       xxl: '64px'
 

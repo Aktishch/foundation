@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  @apply font-base text-black bg-white;
+  @apply font-base text-black bg-grey;
 }
 
 ::selection {
@@ -100,36 +100,4 @@ input[type="checkbox"],
 input[type="radio"],
 input[type="range"] {
   appearance: none;
-}
-
-input[type="range"] {
-  &::-webkit-slider-thumb {
-    appearance    : none;
-    border        : none;
-    background    : none;
-    pointer-events: all;
-    width         : var(--bubble-size);
-    height        : var(--bubble-size);
-    cursor        : ew-resize;
-  }
-
-  &::-moz-range-thumb {
-    appearance    : none;
-    border        : none;
-    background    : none;
-    pointer-events: all;
-    width         : var(--bubble-size);
-    height        : var(--bubble-size);
-    cursor        : ew-resize;
-  }
-
-  &::-ms-thumb {
-    appearance    : none;
-    border        : none;
-    background    : none;
-    pointer-events: all;
-    width         : var(--bubble-size);
-    height        : var(--bubble-size);
-    cursor        : ew-resize;
-  }
 }

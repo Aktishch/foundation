@@ -48,7 +48,7 @@ module.exports = plugin(
         '&-error': {
           fontSize: theme('fontSize.12'),
           color: theme('colors.white.DEFAULT'),
-          backgroundColor: theme('colors.red.DEFAULT'),
+          backgroundColor: theme('colors.orange.DEFAULT'),
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',

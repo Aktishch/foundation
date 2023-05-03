@@ -27,7 +27,7 @@ module.exports = plugin(
         },
 
         '&--error': {
-          borderColor: theme('colors.red.DEFAULT')
+          borderColor: theme('colors.orange.DEFAULT')
         },
 
         '&:first-of-type': {
