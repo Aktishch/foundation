@@ -55,231 +55,38 @@
   }
 }
 
-// Умное меню
-// .smart-menu {
-//   &__block {
-//     max-width: var(--xl);
-//   }
+// Главный блок
+.main {
+  &__item {
+    &--blue {
+      background-image: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 73.05%), radial-gradient(59.82% 533.8% at 30.65% 40.18%, rgba(90, 154, 249, 0.7) 0%, rgba(90, 154, 249, 0) 100%);
+    }
 
-//   &__content &__item {
-//     min-width: auto;
-//   }
-// }
+    &--orange {
+      background-image: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 73.05%);
+    }
+  }
+}
 
-// Перетаскиваемое социальное меню
-// .social {
-//   left: calc(100vw - 150px);
+// Расчет
+.calculation {
+  background: linear-gradient(0deg, rgba(235, 171, 218, 0.2) 0%, rgba(235, 171, 218, 0) 65.21%), linear-gradient(101.47deg, #AECDED 0%, #EAF1F8 100%);
 
-//   &__round {
+  &__image {
+    background-image: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 73.05%);
+    box-shadow: 0px 10px 30px rgba(102, 158, 244, 0.7);
+  }
 
-//     &:not([data-social-round="show"]) {
-//       transform: scale(0) rotate(-180deg);
-//     }
+  &__content {
+    background: radial-gradient(98.48% 326.98% at 0% 3.35%, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 100%);
+  }
+}
 
-//     &[data-social-round="show"] {
-//       transform: scale(1) rotate(0);
-//     }
-//   }
+// Обратная связь
+.feedback {
+  background: linear-gradient(64.82deg, rgba(235, 171, 218, 0.7) 0%, rgba(148, 134, 206, 0) 57.73%), linear-gradient(241.78deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 51.81%), #02274D;
 
-//   &__btn {
-//     &::before {
-//       content         : "";
-//       display         : block;
-//       position        : static;
-//       width           : 100%;
-//       height          : 100%;
-//       background-color: currentColor;
-//       border-radius   : inherit;
-//       box-shadow      : inherit;
-//     }
-//   }
-// }
-
-// Переключатель темы
-// .theme {
-//   left: calc(100vw - 240px);
-// }
-
-// Снежинки
-// .snowflake {
-//   position  : absolute;
-//   background: url("../img/pictures/snow.png") no-repeat center / 100%;
-//   animation : snowflake 3s linear both 1;
-// }
-
-// @keyframes snowflake {
-//   0% {
-//     opacity  : 1;
-//     transform: translate(-50%, 0);
-//     filter   : hue-rotate(0deg);
-//   }
-
-//   100% {
-//     opacity  : 0;
-//     transform: translate(-50%, 1000%);
-//     filter   : hue-rotate(500deg);
-//   }
-// }
-
-// Документы
-// .documents {
-//   &__accordion[data-accordion="active"] &__arrow {
-//     transform: rotate(90deg);
-//   }
-// }
-
-// Фильтер
-// .filtering {
-//   &__circle {
-//     &--grey {
-//       transform: translate(calc(var(--x) * 30), calc(var(--y) * 30));
-//     }
-
-//     &--white {
-//       transform: translate(calc(var(--x) * -30), calc(var(--y) * -30));
-//     }
-//   }
-
-//   &__category.filter-active {
-//     @apply text-white bg-second;
-//   }
-
-//   &__card.filter-show {
-//     animation: filtering-show 0.3s ease both 1;
-//   }
-
-//   @screen md {
-//     &__category.filter-active {
-//       @apply font-bold bg-opacity-0;
-//     }
-//   }
-// }
-
-// @keyframes filtering-show {
-//   0% {
-//     opacity  : 0;
-//     transform: translateY(50px);
-//   }
-
-//   100% {
-//     opacity  : 1;
-//     transform: translateY(0);
-//   }
-// }
-
-// Плеер
-// .player {
-//   &__loading {
-//     animation: loading-player 1s steps(8) infinite;
-//   }
-
-//   &__range {
-//     &::after {
-//       content         : "";
-//       width           : 12px;
-//       height          : 12px;
-//       background-color: currentColor;
-//       border-radius   : 50%;
-//       position        : absolute;
-//       top             : 0;
-//       right           : -4px;
-//       bottom          : 0;
-//       margin-block    : auto;
-//     }
-//   }
-// }
-
-// @keyframes loading-player {
-//   100% {
-//     transform: rotateZ(360deg);
-//   }
-// }
-
-// Продукция
-// .product {
-//   @media(hover) {
-//     &:hover &__heart {
-//       visibility: visible;
-//       opacity   : 1;
-//     }
-//   }
-
-//   @screen md {
-//     @media(hover) {
-//       &__heart {
-//         visibility: hidden;
-//         opacity   : 0;
-//       }
-
-//       &__toggle:checked+&__heart {
-//         visibility: visible;
-//         opacity   : 1;
-//       }
-//     }
-//   }
-// }
-
-// Корзина
-// .basket {
-//   &:not([data-basket="show"]) {
-//     transform: translateY(-40%);
-//   }
-// }
-
-// В корзину
-// .in-basket {
-//   animation: in-basket 2s ease both;
-// }
-
-// @keyframes in-basket {
-//   100% {
-//     top : -10%;
-//     left: 90%;
-//   }
-// }
-
-// Горизорнтальный скролл
-// .scrolling {
-//   @screen md {
-//     & {
-//       height: var(--scroll-height);
-//     }
-
-//     &__image {
-//       width    : 130%;
-//       height   : 130%;
-//       transform: translate3d(var(--scroll-moving), 0, 0);
-//     }
-//   }
-// }
-
-// Квиз
-// .quiz {
-//   &-slider {
-//     &[data-quiz="stop"] .swiper-button-next {
-//       pointer-events: none;
-//       opacity       : 0.5;
-//     }
-
-//     &[data-quiz-end] &-bottom {
-//       visibility: hidden;
-//       opacity   : 0;
-//     }
-//   }
-// }
-
-// Время
-// .timer {
-//   &__stopwatch {
-//     &::after {
-//       content         : "";
-//       display         : block;
-//       position        : relative;
-//       top             : -8px;
-//       width           : 16px;
-//       height          : 16px;
-//       background-color: currentColor;
-//       border-radius   : 50%;
-//     }
-//   }
-// }
+  &__content {
+    background: linear-gradient(64.82deg, rgba(235, 171, 218, 0.4) 0%, rgba(148, 134, 206, 0) 57.73%), linear-gradient(241.78deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 51.81%), #023162;
+  }
+}

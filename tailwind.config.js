@@ -58,6 +58,10 @@ module.exports = {
 
       orange: {
         DEFAULT: '#F1683B'
+      },
+
+      blue: {
+        DEFAULT: '#499AC8'
       }
 
     },
@@ -212,9 +216,9 @@ module.exports = {
 
       xs: '28px',
       sm: '36px',
-      md: '40px',
+      md: '46px',
       lg: '52px',
-      xl: '56px',
+      xl: '58px',
       xxl: '64px'
 
     }

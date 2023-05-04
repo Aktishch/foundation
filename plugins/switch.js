@@ -14,6 +14,7 @@ module.exports = plugin(
         position: 'relative',
         userSelect: 'none',
         color: theme('colors.primary.DEFAULT'),
+        backgroundColor: theme('colors.white.DEFAULT'),
         border: `1px solid ${theme('colors.gray.DEFAULT')}`,
         transition: '0.2s linear',
         cursor: 'pointer',
@@ -22,24 +23,22 @@ module.exports = plugin(
           minWidth: '24px',
           width: '24px',
           height: '24px',
-          borderRadius: '2px',
+          borderRadius: '8px',
+          backgroundImage: 'linear-gradient(180deg, var(--color-none) 18.23%, rgba(0, 0, 0, 0.1) 100%)',
 
           '&::after': {
             content: '""',
             display: 'block',
             width: '100%',
             height: '100%',
-            backgroundColor: theme('colors.white.DEFAULT'),
+            backgroundColor: theme('colors.primary.DEFAULT'),
             borderRadius: 'inherit',
             opacity: 0,
             transition: 'opacity 0.1s linear',
-            mask: 'url("../img/pictures/checkbox.svg") no-repeat center / 16px'
+            mask: 'url("../img/pictures/checkbox.svg") no-repeat center / 14px'
           },
 
           '&:checked': {
-            borderColor: 'currentColor',
-            backgroundColor: 'currentColor',
-
             '&::after': {
               opacity: 1
             }

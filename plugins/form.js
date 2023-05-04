@@ -60,7 +60,7 @@ module.exports = plugin(
           height: '16px',
           opacity: 0,
           visiblity: 'hidden',
-          borderRadius: '4px',
+          borderRadius: '100px',
           transition: '0.3s ease'
         }
       }

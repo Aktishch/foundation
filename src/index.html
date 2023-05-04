@@ -9,8 +9,8 @@
 
 <!-- Главный блок -->
 
-<main class="container flex flex-col items-start justify-center relative overflow-hidden min-h-[820px]">
-  <div class="relative">
+<main class="main container container--xs flex flex-col xl:flex-row xl:items-center justify-between gap-8 md:gap-10 relative overflow-hidden min-h-[820px] pt-24 md:pt-40">
+  <div class="flex flex-col relative z-1">
     <h1 class="font-alt font-medium uppercase text-26 md:text-32 lg:text-42 leading-3 mb-3 md:mb-4">
       <span class="font-extrabold">современный <br>
       Прочный фундамент</span> <br>
@@ -46,11 +46,268 @@
         <p class="font-bold text-14 leading-4">Проект фундамента <br class="hidden md:block">в подарок</p>
       </div>
     </div>
-    <div class="flex items-center gap-4">
-      <button class="btn btn-primary btn-lg btn-fill" data-waved="light">Получить консультацию инженера</button>
-      <button class="btn btn-primary btn-lg btn-fade text-black" data-waved="light">Рассчитать стоимость</button>
+    <div class="flex flex-col md:flex-row md:items-center gap-4">
+      <button class="btn btn-primary btn-lg btn-fill px-1 md:px-8" data-waved="light">Получить консультацию инженера</button>
+      <button class="btn btn-primary btn-lg btn-fade text-black px-1 md:px-8" data-waved="light">Рассчитать стоимость</button>
+    </div>
+  </div>
+  <div class="relative w-full xl:max-w-[790px] xl:-mr-80">
+    <picture>
+      <source srcset="img/pictures/sky.webp" type="image/webp">
+      <img class="block opacity-60 w-full" src="img/pictures/sky.png" alt="">
+    </picture>
+    <div class="flex items-center justify-end absolute inset-0">
+      <picture>
+        <source srcset="img/pictures/build.webp" type="image/webp">
+        <img class="block relative right-[-15px] xs:right-0 w-[375px] xs:w-full xl:w-[910px] max-w-none" src="img/pictures/build.png" alt="">
+      </picture>
+      <div class="absolute top-8 xs:top-16 md:top-24 lg:top-36 xl:top-20 left-3 xs:-left-6 md:left-0 xl:-left-10 rotate-[8deg] xs:rotate-[17deg]">
+        <div class="main__item main__item--blue flex items-center justify-center relative font-normal bg-blue text-white text-12 md:text-14 rounded-[100px] w-max py-3 xs:py-4 px-4 md:px-6" data-waved="dark">
+          Cтроим фундамент за 8 дней
+          <svg class="icon absolute -top-4 -right-3 text-blue text-26">
+            <use xlink:href="img/icons.svg#arrow-to">
+          </svg>
+        </div>
+      </div>
+      <div class="absolute bottom-3 xs:bottom-12 md:bottom-16 lg:bottom-28 right-3 xs:left-56 md:left-72 lg:left-96 xl:left-48 -rotate-6">
+        <div class="main__item main__item--orange flex items-center justify-center relative font-normal bg-orange text-white text-12 md:text-14 rounded-[100px] w-max py-3 xs:py-4 px-4 md:px-6" data-waved="dark">
+          Гарантия на любой фундамент
+          <svg class="icon absolute -top-4 -left-3 text-orange text-26 -scale-x-100">
+            <use xlink:href="img/icons.svg#arrow-to">
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </main>
+
+<!-- Расчет -->
+
+<section class="calculation container relative overflow-hidden md:py-10">
+  <picture>
+    <source srcset="img/pictures/doc.webp" type="image/webp">
+    <img class="hidden lg:block absolute bottom-0 left-[40%] w-full max-w-[1160px]" src="img/pictures/doc.png" alt="">
+  </picture>
+  <picture>
+    <source srcset="img/pictures/doc-min.webp" type="image/webp">
+    <img class="block lg:hidden absolute bottom-0 right-[0] w-full max-w-[500px]" src="img/pictures/doc-min.png" alt="">
+  </picture>
+  <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-10 relative">
+    <div class="flex flex-col">
+      <h2 class="font-alt font-medium uppercase text-26 md:text-32 lg:text-42 leading-3 mb-4 lg:mb-12">
+        Рассчитайте <br>
+        <span class="font-extrabold">предварительную <br>
+        стоимость</span> фундамента
+      </h2>
+      <h3 class="font-semibold text-16 md:text-18 lg:text-20 mb-8 lg:mb-16">Заполнив небольшую форму, вы получите:</h3>
+      <div class="flex flex-col lg:items-start gap-3 md:gap-5 lg:gap-10">
+        <div class="flex items-center bg-white rounded-4 shadow-sm py-2 pl-2 pr-10 lg:ml-12">
+          <div class="calculation__image flex items-center justify-center bg-primary rounded-4 md:rounded-6 min-w-[52px] w-[52px] h-[52px] md:min-w-[64px] md:w-[64px] md:h-[64px] mr-4 md:mr-6">
+            <svg class="icon text-white text-32">
+              <use xlink:href="img/icons.svg#crown">
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-semibold text-14 md:text-16 leading-4">Смету без скрытых платежей</span>
+            <span class="font-normal text-12 md:text-14 leading-4">Предоставим точный и понятный сметный расчет</span>
+          </div>
+        </div>
+        <div class="flex items-center bg-white rounded-4 shadow-sm py-2 pl-2 pr-10">
+          <div class="calculation__image flex items-center justify-center bg-primary rounded-4 md:rounded-6 min-w-[52px] w-[52px] h-[52px] md:min-w-[64px] md:w-[64px] md:h-[64px] mr-4 md:mr-6">
+            <svg class="icon text-white text-32">
+              <use xlink:href="img/icons.svg#crown">
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-semibold text-14 md:text-16 leading-4">Смету без скрытых платежей</span>
+            <span class="font-normal text-12 md:text-14 leading-4">Предоставим точный и понятный сметный расчет</span>
+          </div>
+        </div>
+        <div class="flex items-center bg-white rounded-4 shadow-sm py-2 pl-2 pr-10 lg:ml-12">
+          <div class="calculation__image flex items-center justify-center bg-primary rounded-4 md:rounded-6 min-w-[52px] w-[52px] h-[52px] md:min-w-[64px] md:w-[64px] md:h-[64px] mr-4 md:mr-6">
+            <svg class="icon text-white text-32">
+              <use xlink:href="img/icons.svg#crown">
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-semibold text-14 md:text-16 leading-4">Смету без скрытых платежей</span>
+            <span class="font-normal text-12 md:text-14 leading-4">Предоставим точный и понятный сметный расчет</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calculation__content rounded-6 lg:rounded-[48px] backdrop-blur-xl w-full md:max-w-[415px] p-6 lg:p-10">
+      <form class="form" data-form="params">
+        <label class="form-label mb-4" data-label="input">
+          <span class="font-semibold text-14 mb-2">Укажите ширину</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input h-[38px]" data-input="number" type="text" name="number">
+            </div>
+            <span class="form-error" data-error>Пожалуйста, укажите ширину!</span>
+          </div>
+        </label>
+        <label class="form-label mb-4" data-label="input">
+          <span class="font-semibold text-14 mb-2">Укажите длину</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input h-[38px]" data-input="number" type="text" name="number">
+            </div>
+            <span class="form-error" data-error>Пожалуйста, укажите длину!</span>
+          </div>
+        </label>
+        <label class="form-label mb-4" data-label="input">
+          <span class="font-semibold text-14 mb-2">Стены сооружения</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input h-[38px]" data-input type="text" name="">
+            </div>
+            <span class="form-error" data-error>Пожалуйста, укажите стены!</span>
+          </div>
+        </label>
+        <label class="form-label mb-5" data-label="input">
+          <span class="font-semibold text-14 mb-2">Этажей</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input h-[38px]" data-input="number" type="text" name="number">
+            </div>
+            <span class="form-error" data-error>Пожалуйста, укажите количество этажей!</span>
+          </div>
+        </label>
+        <div class="flex flex-col items-start gap-3 mb-4">
+          <label class="flex items-center link-wrapper">
+            <input class="switch switch--checkbox" type="checkbox" value="Гидроизоляция фундамента" name="checkbox[]">
+            <span class="link font-normal text-14 ml-2">Гидроизоляция фундамента</span>
+          </label>
+          <label class="flex items-center link-wrapper">
+            <input class="switch switch--checkbox" type="checkbox" value="Разводка коммуникаций" name="checkbox[]">
+            <span class="link font-normal text-14 ml-2">Разводка коммуникаций</span>
+          </label>
+          <label class="flex items-center link-wrapper">
+            <input class="switch switch--checkbox" type="checkbox" value="Утепление фундамента" name="checkbox[]">
+            <span class="link font-normal text-14 ml-2">Утепление фундамента</span>
+          </label>
+          <label class="flex items-center link-wrapper">
+            <input class="switch switch--checkbox" type="checkbox" value="Устройство отмостки" name="checkbox[]">
+            <span class="link font-normal text-14 ml-2">Устройство отмостки</span>
+          </label>
+        </div>
+        <label class="form-label mb-6" data-label="input">
+          <span class="font-semibold text-14 mb-2">Комментарий, адрес и подробности</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <textarea class="input h-[60px]" data-input="text" type="text" rows="8" name="text"></textarea>
+            </div>
+            <span class="form-error" data-error>Пожалуйста, оставьте комментарий!</span>
+          </div>
+        </label>
+        <button class="btn btn-primary btn-lg btn-fill mb-6" data-waved="light" type="submit">Получить расчет фундамента</button>
+        <div class="flex items-center justify-between gap-1">
+          <div class="flex flex-col">
+            <span class="font-semibold text-16 leading-1">Есть вопрос?</span>
+            <span class="font-normal text-14 opacity-70">Задайте напрямую</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <a class="btn btn-peach rounded-1 text-36" data-waved="light" href="" target="_blank">
+              <img class="icon" src="img/pictures/wa.svg" alt="">
+            </a>
+            <a class="btn btn-peach rounded-1 text-36" data-waved="light" href="" target="_blank">
+              <img class="icon" src="img/pictures/tg.svg" alt="">
+            </a>
+            <a class="btn btn-peach rounded-1 text-36" data-waved="light" href="" target="_blank">
+              <img class="icon" src="img/pictures/vk.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Обратная связь -->
+
+<section class="feedback container relative overflow-hidden">
+  <div class="absolute inset-0">
+    <div class="pack w-full h-full">
+      <picture>
+        <source srcset="img/pictures/blur.webp" type="image/webp">
+        <img class="image mix-blend-soft-light" src="img/pictures/blur.png" alt="">
+      </picture>
+    </div>
+  </div>
+  <div class="flex flex-col xl:flex-row justify-between gap-6 md:gap-10 relative text-white">
+    <div class="flex flex-col w-full max-w-[370px]">
+      <h2 class="font-alt font-medium uppercase text-26 md:text-36 leading-3 mb-4 md:mb-6 xl:pt-10">
+        Не знаете <span class="font-extrabold">какой <br>
+        фундамент</span> нужен <br>
+        именно вам?
+      </h2>
+      <p class="font-light text-14 md:text-16 leading-4 opacity-90">Предложим Вам именно тот тип фундамента, который будет оптимальный по цене и подходит под конкретно ваш участок, учитывая особенности грунта и других важных факторов.</p>
+    </div>
+    <div class="feedback__content flex flex-col md:flex-row items-end lg:items-center md:justify-between gap-8 md:gap-10 rounded-6 lg:rounded-[48px] w-full xl:max-w-[800px] pt-8 pb-4 px-4 lg:pt-4">
+      <div class="flex flex-col relative z-1 w-full md:max-w-[400px] xl:max-w-[320px] lg:pl-4">
+        <h3 class="font-bold text-24 uppercase leading-1">Оставьте заявку</h3>
+        <p class="font-light text-16 leading-1 mb-3">на <span class="text-[#ffc5a5]">бесплатную консультацию</span></p>
+        <p class="font-light text-16 leading-4 opacity-60 mb-5">Мы перезвоним вам и поможем <br class="hidden xs:block"> определиться с выбором</p>
+        <form class="form" data-form="submit">
+          <label class="form-label mb-6" data-label="input">
+            <span class="font-medium text-14 mb-2">Телефон для связи</span>
+            <div class="form-wrapper">
+              <div class="input-cover">
+                <input class="input" data-input="tel" type="tel" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _" name="tel">
+              </div>
+              <span class="form-error" data-error>Пожалуйста, введите ваш номер!</span>
+            </div>
+          </label>
+          <button class="btn btn-primary btn-lg btn-fill mb-6" data-waved="light" type="submit">Отправить на проверку</button>
+          <div class="link font-light text-12 leading-3 opacity-40 mb-5">
+            Отправляя форму, Вы даете согласие на обработку <br class="hidden xs:block">
+            Ваших персональных данных
+          </div>
+          <div class="flex items-center justify-between gap-1">
+            <div class="flex flex-col">
+              <span class="font-semibold text-16 leading-1">Есть вопрос?</span>
+              <span class="font-normal text-14 opacity-70">Задайте напрямую</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <a class="btn btn-peach rounded-1 text-36" data-waved="light" href="" target="_blank">
+                <img class="icon" src="img/pictures/wa.svg" alt="">
+              </a>
+              <a class="btn btn-peach rounded-1 text-36" data-waved="light" href="" target="_blank">
+                <img class="icon" src="img/pictures/tg.svg" alt="">
+              </a>
+              <a class="btn btn-peach rounded-1 text-36" data-waved="light" href="" target="_blank">
+                <img class="icon" src="img/pictures/vk.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="relative w-full md:max-w-[400px] xl:-mr-6">
+        <picture>
+          <source srcset="img/pictures/foundation-left.webp" type="image/webp">
+          <img class="hidden xl:block absolute top-0 bottom-0 my-auto w-[170px] left-[-160px]" src="img/pictures/foundation-left.png" alt="">
+        </picture>
+        <div class="pack pack-rect-sm md:pack-[105] bg-grey rounded-6 lg:rounded-[48px]">
+          <div class="loader">
+            <span class="loader-progress">
+              <svg class="loader-icon icon">
+                <use xlink:href="img/icons.svg#loader">
+              </svg>
+            </span>
+          </div>
+          <picture>
+            <source srcset="img/pictures/foundation.webp" type="image/webp">
+            <img class="image" src="img/pictures/foundation.jpg" alt="">
+          </picture>
+        </div>
+        <picture>
+          <source srcset="img/pictures/foundation-right.webp" type="image/webp">
+          <img class="hidden xl:block absolute top-[176px] w-[145px] right-[-140px]" src="img/pictures/foundation-right.png" alt="">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
 
 <%= require('./includes/footer.html').default %>

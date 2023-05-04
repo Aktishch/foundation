@@ -10,10 +10,10 @@ module.exports = plugin(
       '.input': {
         flexGrow: 1,
         width: '100%',
-        height: theme('size.lg'),
+        height: theme('size.md'),
         backgroundColor: theme('colors.white.DEFAULT'),
         padding: '12px 16px',
-        border: `1px solid ${formatColor({ mode: 'rgba', color: parseColor(theme('colors.gray.DEFAULT')).color, alpha: 0.3 })}`,
+        border: `1px solid ${formatColor({ mode: 'rgba', color: parseColor(theme('colors.gray.DEFAULT')).color, alpha: 0.7 })}`,
         transition: '0.2s ease',
         userSelect: 'initial',
 
@@ -22,30 +22,22 @@ module.exports = plugin(
           width: '100%'
         },
 
-        '&--textarea': {
-          height: 'auto'
-        },
-
         '&--error': {
           borderColor: theme('colors.orange.DEFAULT')
         },
 
         '&:first-of-type': {
-          borderTopLeftRadius: '8px',
-          borderBottomLeftRadius: '8px'
+          borderTopLeftRadius: '12px',
+          borderBottomLeftRadius: '12px'
         },
 
         '&:last-of-type': {
-          borderTopRightRadius: '8px',
-          borderBottomRightRadius: '8px'
+          borderTopRightRadius: '12px',
+          borderBottomRightRadius: '12px'
         },
 
         '&:not(&--error):focus': {
           borderColor: theme('colors.gray.DEFAULT')
-        },
-
-        '&::placeholder': {
-          color: theme('colors.gray.DEFAULT')
         },
 
         '&::disabled': {
