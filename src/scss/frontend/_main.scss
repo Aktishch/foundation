@@ -74,11 +74,40 @@
 
   &__image {
     background-image: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 73.05%);
-    box-shadow: 0px 10px 30px rgba(102, 158, 244, 0.7);
+    box-shadow      : 0px 10px 30px rgba(102, 158, 244, 0.7);
   }
 
   &__content {
     background: radial-gradient(98.48% 326.98% at 0% 3.35%, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 100%);
+  }
+}
+
+// Строительство
+.construction {
+  &__category.filter-active {
+    @apply text-white bg-primary pointer-events-none;
+  }
+
+  &-slider.filter-show {
+    animation: filtering-show 0.3s ease both 1;
+  }
+
+  @screen sm {
+    &-wrapper {
+      transform: none !important;
+    }
+  }
+}
+
+@keyframes filtering-show {
+  0% {
+    opacity  : 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity  : 1;
+    transform: translateY(0);
   }
 }
 
@@ -88,5 +117,44 @@
 
   &__content {
     background: linear-gradient(64.82deg, rgba(235, 171, 218, 0.4) 0%, rgba(148, 134, 206, 0) 57.73%), linear-gradient(241.78deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 51.81%), #023162;
+  }
+}
+
+// Услуги
+.services {
+  &__info {
+    background-image: linear-gradient(180deg, rgba(0, 27, 55, 0) 31.95%, #001B37 100%);
+  }
+
+  @screen sm {
+    &-wrapper {
+      transform: none !important;
+    }
+  }
+}
+
+// Специалист
+.specialist {
+  &__content {
+    background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 73.05%), #0085EA;
+  }
+
+  &__circle {
+    background: linear-gradient(191.35deg, #AECDED 21.52%, #EAF1F8 82.49%);
+    animation: specialist-circle 5s linear infinite;
+  }
+}
+
+@keyframes specialist-circle {
+  0% {
+    transform: rotate(0);
+  }
+
+  0% {
+    transform: rotate(180deg);
+  }
+
+  0% {
+    transform: rotate(360deg);
   }
 }

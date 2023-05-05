@@ -2,7 +2,7 @@
 // import yandexMap from './lib/yandex-map'
 // import airDatepicker from './lib/air-datepicker'
 import fancybox from './lib/fancybox'
-// import sliderSwiper from './lib/slider-swiper'
+import sliderSwiper from './lib/slider-swiper'
 import gsap from './lib/gsap'
 
 // Scripts
@@ -23,7 +23,7 @@ import waved from './ts/waved'
 // import accordion from './ts/accordion'
 // import formatBg from './ts/format-bg'
 // import parallax from './ts/parallax'
-// import filter from './ts/filter'
+import filter from './ts/filter'
 // import outNumber from './ts/out-number'
 // import writeText from './ts/write-text'
 import formSubmit from './ts/form-submit'
@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // // yandexMap.init()
   // airDatepicker.init()
   fancybox.init()
-  // sliderSwiper.init()
+  sliderSwiper.init()
   // // scrollHeader.init()
   mobileMenu.init()
   // progressLine.init()
@@ -73,7 +73,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // accordion.init()
   // formatBg.init()
   // parallax.init()
-  // filter.init()
+  filter.init()
   // outNumber.init()
   // writeText.init()
   formSubmit.init()

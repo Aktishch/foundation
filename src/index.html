@@ -11,16 +11,16 @@
 
 <main class="main container container--xs flex flex-col xl:flex-row xl:items-center justify-between gap-8 md:gap-10 relative overflow-hidden min-h-[820px] pt-24 md:pt-40">
   <div class="flex flex-col relative z-1">
-    <h1 class="font-alt font-medium uppercase text-26 md:text-32 lg:text-42 leading-3 mb-3 md:mb-4">
+    <h1 class="font-alt font-medium uppercase text-26 md:text-32 lg:text-42 leading-3 mb-3 lg:mb-4">
       <span class="font-extrabold">современный <br>
       Прочный фундамент</span> <br>
       для вашего дома
     </h1>
-    <p class="font-normal text-14 md:text-16 leading-4 mb-8 md:mb-14">
-      Самостоятельно определим тип фундамента, который подходит <br>
+    <p class="font-normal text-14 md:text-16 leading-4 mb-8 lg:mb-14">
+      Самостоятельно определим тип фундамента, который подходит <br class="hidden sm:block">
       конкретно под ваш участок  и наиболее оптимален по цене
     </p>
-    <div class="flex flex-col md:flex-row gap-2 md:gap-8 mb-8 md:mb-14">
+    <div class="flex flex-col md:flex-row gap-2 md:gap-8 mb-8 lg:mb-14">
       <div class="flex items-center">
         <div class="flex items-center justify-center bg-white shadow-sm rounded-3 w-8 md:w-10 h-8 md:h-12 mr-3">
           <svg class="icon text-primary text-20 md:text-24">
@@ -90,7 +90,7 @@
   </picture>
   <picture>
     <source srcset="img/pictures/doc-min.webp" type="image/webp">
-    <img class="block lg:hidden absolute bottom-0 right-[0] w-full max-w-[500px]" src="img/pictures/doc-min.png" alt="">
+    <img class="block lg:hidden absolute top-[250px] md:top-auto md:bottom-0 right-[0] w-full max-w-[300px] md:max-w-[500px]" src="img/pictures/doc-min.png" alt="">
   </picture>
   <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-10 relative">
     <div class="flex flex-col">
@@ -224,6 +224,83 @@
   </div>
 </section>
 
+<!-- Строительство -->
+
+<section class="construction container bg-grey overflow-hidden">
+  <h2 class="font-alt font-medium uppercase sm:text-center text-26 md:text-32 lg:text-42 leading-3 mb-4">
+    Занимаемся <br class="sm:hidden"> строительством <br class="xl:hidden"> <span class="font-extrabold">с 2015 года</span>
+  </h2>
+  <h3 class="font-normal sm:text-center text-16 leading-4 mb-10 lg:mb-12">Учитываем все пожелания и строго соблюдаем нормативы</h3>
+  <div data-filter>
+    <div class="hidden sm:flex items-center justify-between gap-2 bg-primary bg-opacity-20 rounded-[100px] w-max p-1 mx-auto mb-6 lg:mb-12">
+      <button class="construction__category filter-active btn btn-primary btn-lg text-black" data-filter-category="category-1" data-waved="dark">Фундаменты</button>
+      <button class="construction__category btn btn-primary btn-lg text-black" data-filter-category="category-2" data-waved="dark">Дома под ключ</button>
+    </div>
+    <h4 class="sm:hidden font-bold uppercase text-20 mb-6">ФУНДАМЕНТЫ</h4>
+    <div class="construction-slider relative mb-6 sm:mb-0" data-filter-card="category-1">
+      <div class="swiper swiper--overwrap overflow-visible">
+        <div class="construction-wrapper swiper-wrapper flex sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 lg:gap-8">
+          <% for (var i = 0; i < 6; i++) { %>
+            <div class="swiper-slide h-auto">
+              <div class="card h-full" data-waved="dark">
+                <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
+                  <div class="loader">
+                    <span class="loader-progress">
+                      <svg class="loader-icon icon">
+                        <use xlink:href="img/icons.svg#loader">
+                      </svg>
+                    </span>
+                  </div>
+                  <picture>
+                    <source srcset="img/pictures/foundation.webp" type="image/webp">
+                    <img class="image" src="img/pictures/foundation.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="card-content pt-4 pb-6 px-4">
+                  <p class="font-semibold text-16 mb-1">Проект А 10</p>
+                  <p class="font-normal text-16 opacity-60 mb-3">Общая площадь 55 м<sup>2</sup></p>
+                  <p class="font-semibold text-20 mt-auto">2 300 000 ₽</p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <h4 class="sm:hidden font-bold uppercase text-20 mb-6">ДОМА ПОД КЛЮЧ</h4>
+    <div class="construction-slider relative sm:hidden" data-filter-card="category-2">
+      <div class="swiper swiper--overwrap overflow-visible">
+        <div class="construction-wrapper swiper-wrapper flex sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 lg:gap-8">
+          <% for (var i = 0; i < 6; i++) { %>
+            <div class="swiper-slide h-auto">
+              <div class="card h-full" data-waved="dark">
+                <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
+                  <div class="loader">
+                    <span class="loader-progress">
+                      <svg class="loader-icon icon">
+                        <use xlink:href="img/icons.svg#loader">
+                      </svg>
+                    </span>
+                  </div>
+                  <picture>
+                    <source srcset="img/pictures/foundation.webp" type="image/webp">
+                    <img class="image" src="img/pictures/foundation.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="card-content pt-4 pb-6 px-4">
+                  <p class="font-semibold text-16 mb-1">Проект А 10</p>
+                  <p class="font-normal text-16 opacity-60 mb-3">Общая площадь 55 м<sup>2</sup></p>
+                  <p class="font-semibold text-20 mt-auto">2 300 000 ₽</p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Обратная связь -->
 
 <section class="feedback container relative overflow-hidden">
@@ -247,7 +324,7 @@
     <div class="feedback__content flex flex-col md:flex-row items-end lg:items-center md:justify-between gap-8 md:gap-10 rounded-6 lg:rounded-[48px] w-full xl:max-w-[800px] pt-8 pb-4 px-4 lg:pt-4">
       <div class="flex flex-col relative z-1 w-full md:max-w-[400px] xl:max-w-[320px] lg:pl-4">
         <h3 class="font-bold text-24 uppercase leading-1">Оставьте заявку</h3>
-        <p class="font-light text-16 leading-1 mb-3">на <span class="text-[#ffc5a5]">бесплатную консультацию</span></p>
+        <p class="font-light text-16 leading-1 mb-3">на <span class="text-cream">бесплатную консультацию</span></p>
         <p class="font-light text-16 leading-4 opacity-60 mb-5">Мы перезвоним вам и поможем <br class="hidden xs:block"> определиться с выбором</p>
         <form class="form" data-form="submit">
           <label class="form-label mb-6" data-label="input">
@@ -305,6 +382,158 @@
           <source srcset="img/pictures/foundation-right.webp" type="image/webp">
           <img class="hidden xl:block absolute top-[176px] w-[145px] right-[-140px]" src="img/pictures/foundation-right.png" alt="">
         </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Услуги -->
+
+<% var services = [
+  {
+    img: '1',
+    text: 'Проектирование <br> конструкций'
+  },
+  {
+    img: '2',
+    text: 'Геология земельного <br> участка'
+  },
+  {
+    img: '3',
+    text: 'Посадка здания <br> и земляные работы'
+  },
+  {
+    img: '4',
+    text: 'Строительство <br> под ключ'
+  }
+] %>
+
+<section class="services container bg-white overflow-hidden">
+  <h2 class="font-alt font-medium uppercase sm:text-center text-26 md:text-32 lg:text-42 leading-3 mb-4 md:mb-9 xl:mb-16">
+    ОКАЗЫВАЕМ <span class="font-extrabold">ПОЛНЫЙ КОМПЛЕКС УСЛУГ</span> <br class="hidden md:block">
+    в монолитном строительстве
+  </h2>
+  <h3 class="sm:hidden font-normal text-14 mb-8">
+    Учитываем все пожелания и строго <br>
+    соблюдаем нормативы
+  </h3>
+  <div class="services-slider relative">
+    <div class="swiper swiper--overwrap">
+      <div class="services-wrapper swiper-wrapper flex sm:grid sm:grid-cols-2 xl:grid-cols-4 sm:gap-6">
+        <% for (var i = 0; i < services.length; i++) { %>
+          <div class="swiper-slide h-auto">
+            <div class="pack pack-sheet sm:pack-rect-lg xl:pack-[140] bg-grey rounded-6 lg:rounded-[48px] h-full">
+              <div class="loader">
+                <span class="loader-progress">
+                  <svg class="loader-icon icon">
+                    <use xlink:href="img/icons.svg#loader">
+                  </svg>
+                </span>
+              </div>
+              <picture>
+                <source srcset="img/pictures/services-<%= services[i].img %>.webp" type="image/webp">
+                <img class="image image-rise" src="img/pictures/services-<%= services[i].img %>.jpg" alt="">
+              </picture>
+              <div class="services__info flex items-end justify-center absolute inset-0 pointer-events-none py-6 px-4 md:px-6">
+                <h4 class="font-semibold text-center text-white text-20 leading-4"><%= services[i].text %></h4>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Специалист -->
+
+<section class="specialist container container--xs bg-grey">
+  <h2 class="font-alt font-medium uppercase md:text-center text-26 md:text-32 lg:text-42 leading-3 mb-9 lg:mb-12">
+    <span class="font-extrabold">Бесплатно</span> вызовите нашего <br class="hidden md:block">
+    специалиста <span class="font-extrabold">в удобное для Вас время</span>
+  </h2>
+  <div class="specialist__content relative rounded-6 lg:rounded-[48px] overflow-hidden">
+    <div class="absolute inset-0">
+      <picture>
+        <source srcset="img/pictures/base.webp" type="image/webp">
+        <img class="hidden lg:block absolute bottom-0 right-0 w-full max-w-[735px]" src="img/pictures/base.png" alt="">
+      </picture>
+      <div class="absolute top-[50%] left-[50%] bg-white bg-opacity-50 blur-[100px] -translate-x-[50%] -translate-y-[50%] w-[375px] h-[375px]"></div>
+      <div class="specialist__circle absolute top-[45%] xs:top-[40%] sm:top-[35%] md:-top-[43%] left-[-55%] sm:left-[-28%] md:left-auto md:-right-[63%] lg:-right-[35%] xl:-right-[25%] rounded-max w-[730px] h-[730px] md:w-[890px] md:h-[890px] my-0"></div>
+      <picture>
+        <source srcset="img/pictures/roulette.webp" type="image/webp">
+        <img class="hidden xl:block absolute top-[50%] left-[43%] -translate-x-[50%] -translate-y-[50%] w-full max-w-[490px]" src="img/pictures/roulette.png" alt="">
+      </picture>
+    </div>
+    <div class="flex flex-col md:flex-row md:justify-between gap-20 md:gap-5 relative p-6 lg:p-14">
+      <div class="flex flex-col text-white w-full md:max-w-[310px]">
+        <h4 class="font-bold text-20 md:text-24 leading-4 mb-6 md:mb-11">К вам на объект приедет главный инженер компании, который:</h4>
+        <ul class="flex flex-col gap-4 md:gap-6">
+          <li class="flex items-center">
+            <svg class="icon text-cream text-20 lg:text-24 mr-5 lg:mr-6">
+              <use xlink:href="img/icons.svg#check">
+            </svg>
+            <span class="font-medium text-14 leading-4">Сделает точный замер</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="icon text-cream text-20 lg:text-24 mr-5 lg:mr-6">
+              <use xlink:href="img/icons.svg#check">
+            </svg>
+            <span class="font-medium text-14 leading-4">Определит грунт и <br class="hidden md:block lg:hidden"> необходимый <br class="hidden lg:block"> тип фундамента</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="icon text-cream text-20 lg:text-24 mr-5 lg:mr-6">
+              <use xlink:href="img/icons.svg#check">
+            </svg>
+            <span class="font-medium text-14 leading-4">Проконсультирует по всем <br class="hidden md:block"> предстоящим работам</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="icon text-cream text-20 lg:text-24 mr-5 lg:mr-6">
+              <use xlink:href="img/icons.svg#check">
+            </svg>
+            <span class="font-medium text-14 leading-4">Ориентирует по срокам <br class="hidden md:block"> и стоимости</span>
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col w-full md:max-w-[380px] lg:pr-14">
+        <h3 class="font-bold text-20 md:text-24 leading-1 mb-3">Заполните форму</h3>
+        <p class="font-normal text-14 md:text-16 leading-2 mb-8">
+          Мы перезвоним Вам и согласуем <br>
+          дату и время визита специалиста
+        </p>
+        <form class="form" data-form="submit">
+          <label class="form-label mb-6" data-label="input">
+            <span class="font-medium text-14 mb-2">Телефон для связи</span>
+            <div class="form-wrapper">
+              <div class="input-cover">
+                <input class="input" data-input="tel" type="tel" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _" name="tel">
+              </div>
+              <span class="form-error" data-error>Пожалуйста, введите ваш номер!</span>
+            </div>
+          </label>
+          <button class="btn btn-primary btn-lg btn-fill mb-6" data-waved="light" type="submit">Отправить на проверку</button>
+          <div class="link font-normal text-12 leading-3 opacity-80 mb-4 md:mb-7">
+            Отправляя форму, Вы даете согласие на обработку <br class="hidden xs:block">
+            Ваших персональных данных
+          </div>
+          <div class="flex items-center justify-between gap-1">
+            <div class="flex flex-col">
+              <span class="font-semibold text-16 leading-1">Есть вопрос?</span>
+              <span class="font-normal text-14 opacity-70">Задайте напрямую</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <a class="btn btn-peach rounded-1 text-36" data-waved="light" href="" target="_blank">
+                <img class="icon" src="img/pictures/wa.svg" alt="">
+              </a>
+              <a class="btn btn-peach rounded-1 text-36" data-waved="light" href="" target="_blank">
+                <img class="icon" src="img/pictures/tg.svg" alt="">
+              </a>
+              <a class="btn btn-peach rounded-1 text-36" data-waved="light" href="" target="_blank">
+                <img class="icon" src="img/pictures/vk.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>

@@ -2,98 +2,43 @@ import Swiper from 'swiper/bundle'
 import 'swiper/css/bundle'
 
 import media from '../ts/functions/media'
-import quiz from '../ts/quiz'
+// import quiz from '../ts/quiz'
 
 const init = () => {
 
-  const gallerySlider = new Swiper('.gallery-slider .swiper', {
+  const constructionSlider = new Swiper('.construction-slider .swiper', {
 
-    pagination: {
-
-      el: '.gallery-slider .swiper-pagination',
-      clickable: true
-
-    },
-
-    navigation: {
-
-      prevEl: '.gallery-slider .swiper-button-prev',
-      nextEl: '.gallery-slider .swiper-button-next'
-
-    },
-
-    effect: 'coverflow',
-    slidesPerView: 1.3,
-    spaceBetween: 20,
-    grabCursor: true,
-    loop: true,
-    freeMode: true,
+    slidesPerView: 1.1,
+    spaceBetween: 16,
+    speed: 500,
 
     breakpoints: {
 
       [media.sm]: {
 
-        slidesPerView: 2
-
-      },
-
-      [media.lg]: {
-
-        slidesPerView: 3
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        allowTouchMove: false
 
       }
-
-    },
-
-    autoplay: {
-
-      delay: 3000,
-      stopOnLastSlide: false,
-      disableOnInteraction: false
 
     }
 
   })
 
-  const productsSlider = new Swiper('.products-slider .swiper', {
+  const servicesSlider = new Swiper('.services-slider .swiper', {
 
-    pagination: {
-
-      el: '.products-slider .swiper-pagination',
-      clickable: true
-
-    },
-
-    navigation: {
-
-      prevEl: '.products-slider .swiper-button-prev',
-      nextEl: '.products-slider .swiper-button-next'
-
-    },
-
-    slidesPerView: 1.3,
-    slidesPerGroup: 1,
-    spaceBetween: 20,
-    grabCursor: true,
-    watchSlidesProgress: true,
+    slidesPerView: 1.2,
+    spaceBetween: 28,
+    speed: 500,
 
     breakpoints: {
 
       [media.sm]: {
 
-        slidesPerView: 2
-
-      },
-
-      [media.lg]: {
-
-        slidesPerView: 3
-
-      },
-
-      [media.xl]: {
-
-        slidesPerView: 4
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        allowTouchMove: false
 
       }
 
@@ -101,134 +46,229 @@ const init = () => {
 
   })
 
-  const quizImages = new Swiper('.quiz-images .swiper', {
+  // const gallerySlider = new Swiper('.gallery-slider .swiper', {
 
-    effect: 'cube',
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    allowTouchMove: false
+  //   pagination: {
 
-  })
+  //     el: '.gallery-slider .swiper-pagination',
+  //     clickable: true
 
-  const quizSlider = new Swiper('.quiz-slider .swiper', {
+  //   },
 
-    navigation: {
+  //   navigation: {
 
-      prevEl: '.quiz-slider .swiper-button-prev',
-      nextEl: '.quiz-slider .swiper-button-next'
+  //     prevEl: '.gallery-slider .swiper-button-prev',
+  //     nextEl: '.gallery-slider .swiper-button-next'
 
-    },
+  //   },
 
-    pagination: {
+  //   effect: 'coverflow',
+  //   slidesPerView: 1.3,
+  //   spaceBetween: 20,
+  //   grabCursor: true,
+  //   loop: true,
+  //   freeMode: true,
 
-      el: '.quiz-slider .swiper-pagination',
-      type: 'custom',
+  //   breakpoints: {
 
-      renderCustom: (swiper, current, total) => {
+  //     [media.sm]: {
 
-        return total - current
+  //       slidesPerView: 2
 
-      }
+  //     },
 
-    },
+  //     [media.lg]: {
 
-    effect: 'flip',
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 30,
-    allowTouchMove: false,
-    watchSlidesProgress: true,
+  //       slidesPerView: 3
 
-    on: {
+  //     }
 
-      slideChange: (swiper) => {
+  //   },
 
-        quizImages.slideTo(swiper.activeIndex)
+  //   autoplay: {
 
-        quiz.checkQuizSlide(swiper.visibleSlides[0])
+  //     delay: 3000,
+  //     stopOnLastSlide: false,
+  //     disableOnInteraction: false
 
-        if (swiper.visibleSlides[0] == swiper.slides[swiper.slides.length - 1]) {
+  //   }
 
-          swiper.el.closest('[data-quiz]').setAttribute('data-quiz-end', '')
+  // })
 
-        } else {
+  // const productsSlider = new Swiper('.products-slider .swiper', {
 
-          swiper.el.closest('[data-quiz]').removeAttribute('data-quiz-end')
+  //   pagination: {
 
-        }
+  //     el: '.products-slider .swiper-pagination',
+  //     clickable: true
 
-      }
+  //   },
 
-    }
+  //   navigation: {
 
-  })
+  //     prevEl: '.products-slider .swiper-button-prev',
+  //     nextEl: '.products-slider .swiper-button-next'
 
-  const descriptionBg = new Swiper('.description-bg .swiper', {
+  //   },
 
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 30,
-    speed: 1000,
-    allowTouchMove: false
+  //   slidesPerView: 1.3,
+  //   slidesPerGroup: 1,
+  //   spaceBetween: 20,
+  //   grabCursor: true,
+  //   watchSlidesProgress: true,
 
-  })
+  //   breakpoints: {
 
-  const descriptionBullets = new Swiper('.description-bullets .swiper', {
+  //     [media.sm]: {
 
-    slidesPerView: 3,
-    slidesPerGroup: 1,
-    spaceBetween: 20,
-    speed: 1000,
-    grabCursor: true,
+  //       slidesPerView: 2
 
-    breakpoints: {
+  //     },
 
-      [media.md]: {
+  //     [media.lg]: {
 
-        slidesPerView: 4
+  //       slidesPerView: 3
 
-      }
+  //     },
 
-    }
+  //     [media.xl]: {
 
-  })
+  //       slidesPerView: 4
 
-  const descriptionInfo = new Swiper('.description-info .swiper', {
+  //     }
 
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 30,
-    speed: 1000,
-    allowTouchMove: false
+  //   }
 
-  })
+  // })
 
-  const descriptionSlider = new Swiper('.description-slider .swiper', {
+  // const quizImages = new Swiper('.quiz-images .swiper', {
 
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 30,
-    speed: 1000,
-    grabCursor: true,
+  //   effect: 'cube',
+  //   slidesPerView: 1,
+  //   slidesPerGroup: 1,
+  //   allowTouchMove: false
 
-    thumbs: {
+  // })
 
-      swiper: descriptionBullets
+  // const quizSlider = new Swiper('.quiz-slider .swiper', {
 
-    },
+  //   navigation: {
 
-    on: {
+  //     prevEl: '.quiz-slider .swiper-button-prev',
+  //     nextEl: '.quiz-slider .swiper-button-next'
 
-      slideChange: (swiper) => {
+  //   },
 
-        descriptionBg.slideTo(swiper.activeIndex)
-        descriptionInfo.slideTo(swiper.activeIndex)
+  //   pagination: {
 
-      }
+  //     el: '.quiz-slider .swiper-pagination',
+  //     type: 'custom',
 
-    }
+  //     renderCustom: (swiper, current, total) => {
 
-  })
+  //       return total - current
+
+  //     }
+
+  //   },
+
+  //   effect: 'flip',
+  //   slidesPerView: 1,
+  //   slidesPerGroup: 1,
+  //   spaceBetween: 30,
+  //   allowTouchMove: false,
+  //   watchSlidesProgress: true,
+
+  //   on: {
+
+  //     slideChange: (swiper) => {
+
+  //       quizImages.slideTo(swiper.activeIndex)
+
+  //       quiz.checkQuizSlide(swiper.visibleSlides[0])
+
+  //       if (swiper.visibleSlides[0] == swiper.slides[swiper.slides.length - 1]) {
+
+  //         swiper.el.closest('[data-quiz]').setAttribute('data-quiz-end', '')
+
+  //       } else {
+
+  //         swiper.el.closest('[data-quiz]').removeAttribute('data-quiz-end')
+
+  //       }
+
+  //     }
+
+  //   }
+
+  // })
+
+  // const descriptionBg = new Swiper('.description-bg .swiper', {
+
+  //   slidesPerView: 1,
+  //   slidesPerGroup: 1,
+  //   spaceBetween: 30,
+  //   speed: 1000,
+  //   allowTouchMove: false
+
+  // })
+
+  // const descriptionBullets = new Swiper('.description-bullets .swiper', {
+
+  //   slidesPerView: 3,
+  //   slidesPerGroup: 1,
+  //   spaceBetween: 20,
+  //   speed: 1000,
+  //   grabCursor: true,
+
+  //   breakpoints: {
+
+  //     [media.md]: {
+
+  //       slidesPerView: 4
+
+  //     }
+
+  //   }
+
+  // })
+
+  // const descriptionInfo = new Swiper('.description-info .swiper', {
+
+  //   slidesPerView: 1,
+  //   slidesPerGroup: 1,
+  //   spaceBetween: 30,
+  //   speed: 1000,
+  //   allowTouchMove: false
+
+  // })
+
+  // const descriptionSlider = new Swiper('.description-slider .swiper', {
+
+  //   slidesPerView: 1,
+  //   slidesPerGroup: 1,
+  //   spaceBetween: 30,
+  //   speed: 1000,
+  //   grabCursor: true,
+
+  //   thumbs: {
+
+  //     swiper: descriptionBullets
+
+  //   },
+
+  //   on: {
+
+  //     slideChange: (swiper) => {
+
+  //       descriptionBg.slideTo(swiper.activeIndex)
+  //       descriptionInfo.slideTo(swiper.activeIndex)
+
+  //     }
+
+  //   }
+
+  // })
 
   window.Swiper = Swiper
 

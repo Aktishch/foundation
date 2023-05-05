@@ -5,6 +5,7 @@ module.exports = plugin(
 
   ({ addComponents, theme }) => {
 
+    const bg = parseColor(theme('colors.white.DEFAULT')).color
     const shadow = parseColor(theme('colors.black.DEFAULT')).color
 
     addComponents({
@@ -13,9 +14,11 @@ module.exports = plugin(
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
-        backgroundColor: theme('colors.white.DEFAULT'),
-        boxShadow: `8px 8px 4px ${formatColor({ mode: 'rgba', color: shadow, alpha: 0.2 })}`,
-        borderRadius: '16px',
+        backgroundImage: `radial-gradient(336.9% 105.08% at 0% 100%, ${formatColor({ mode: 'rgba', color: bg, alpha: 0.4 })} 0%, ${formatColor({ mode: 'rgba', color: bg, alpha: 0.2 })} 100%)`,
+        boxShadow: `0px 20px 40px ${formatColor({ mode: 'rgba', color: shadow, alpha: 0.1 })}`,
+        borderRadius: '24px',
+        border: `1px solid ${theme('colors.white.DEFAULT')}`,
+        backdropFilter: 'blur(20px)',
         transition: 'box-shadow 0.2s ease, transform 0.2s ease',
         overflow: 'hidden',
 
@@ -32,7 +35,7 @@ module.exports = plugin(
 
       '@media(hover)': {
         '.card--active:hover': {
-          boxShadow: `8px 8px 4px ${formatColor({ mode: 'rgba', color: shadow, alpha: 0.4 })}`
+          boxShadow: `0px 20px 40px ${formatColor({ mode: 'rgba', color: shadow, alpha: 0.4 })}`
         }
       }
 
