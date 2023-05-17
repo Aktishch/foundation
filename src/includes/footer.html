@@ -1,31 +1,67 @@
-      <!-- Карта -->
+      <!-- Контакты -->
 
-      <!-- <section class="container container--distance relative bg-grey overflow-hidden h-96 dark:bg-dark">
-        <div class="loader">
-          <span class="loader-progress">
-            <svg class="loader-icon icon">
-              <use xlink:href="img/icons.svg#loader">
-            </svg>
-          </span>
+      <section class="container flex flex-col gap-10 relative bg-white overflow-hidden pb-0 lg:pb-20">
+        <div class="order-2 relative lg:absolute top-0 bottom-0 right-0 bg-grey lg:w-1/2 max-w-[1000px] h-[300px] md:h-[370px] lg:h-full -mx-[15px] sm:mx-0">
+          <div class="loader">
+            <span class="loader-progress">
+              <svg class="loader-icon icon">
+                <use xlink:href="img/icons.svg#loader">
+              </svg>
+            </span>
+          </div>
+          <div class="absolute inset-0 overflow-hidden" id="map"></div>
         </div>
-        <div class="absolute inset-0 overflow-hidden" id="map"></div>
-      </section> -->
+        <div class="order-1 flex flex-col items-start relative lg:w-max">
+          <h2 class="font-alt font-extrabold text-26 md:text-32 lg:text-42 leading-3 mb-6">Офис в Краснодаре</h2>
+          <button class="btn btn-primary btn-lg btn-fill w-full sm:w-auto mb-6 md:mb-9" data-waved="light">Записаться на на встречу</button>
+          <p class="font-normal text-14 leading-3 mb-6">
+            г. Краснодар, ул. Промышленная 52 <br>
+            Пн-Пт 09:00-18:00
+          </p>
+          <a class="btn link font-bold text-32 mb-6" data-waved="dark" href="tel: 8 800 707 06 12">8 800 707 06 12</a>
+          <div class="flex items-center gap-4 mb-6">
+            <a class="btn btn-peach rounded-1 text-36" data-waved="light" href="" target="_blank">
+              <img class="icon" src="img/pictures/wa.svg" alt="">
+            </a>
+            <a class="btn btn-peach rounded-1 text-36" data-waved="light" href="" target="_blank">
+              <img class="icon" src="img/pictures/tg.svg" alt="">
+            </a>
+            <a class="btn btn-peach rounded-1 text-36" data-waved="light" href="" target="_blank">
+              <img class="icon" src="img/pictures/vk.svg" alt="">
+            </a>
+          </div>
+          <a class="btn link font-medium text-14" data-waved="dark" href="mailto: kravchenkoteam@info.ru">kravchenkoteam@info.ru</a>
+        </div>
+      </section>
 
       <!-- Подвал -->
     
-      <!-- <footer class="container flex flex-wrap flex-col md:flex-row items-center justify-between gap-4 bg-black text-second pt-4 pb-10 md:pb-4" id="footer">
-        <a class="btn w-[150px]" data-waved="light" href="/">
-          <picture>
-            <source srcset="img/pictures/logo.webp" type="image/webp">
-            <img class="w-full" src="img/pictures/logo.png" alt="">
-          </picture>
-        </a>
-        <address class="text-center text-16 leading-4">​Рождественская набережная, <br> 45/1​5 офис; 3 этаж</address>
-        <span class="btn btn-second text-18 w-max p-1" data-waved="light" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-politics.html">Privacy policy</span>
-        <span class="text-18">
-          Разработка: <a class="underline w-max" href="https://stdkit.ru/" target="_blank">Студия К.И.Т.</a>
-        </span>
-      </footer> -->
+      <footer class="container flex items-center justify-between gap-5 py-4 sm:py-3">
+        <div class="flex items-center">
+          <a class="btn w-[125px] mr-5" data-waved="dark" href="/">
+            <picture>
+              <source srcset="img/pictures/logo.webp" type="image/webp">
+              <img class="w-full" src="img/pictures/logo.png" alt="">
+            </picture>
+          </a>
+          <p class="font-normal text-14 sm:text-16 leading-2 opacity-70">Вся база актуальной недвижимостив одном месте</p>
+        </div>
+        <div class="hidden lg:first-line:flex items-center gap-6">
+          <a class="btn btn-peach rounded-1 text-32" data-waved="light" href="" target="_blank">
+            <img class="icon" src="img/pictures/yt.svg" alt="">
+          </a>
+          <a class="btn btn-peach rounded-1 text-32" data-waved="light" href="" target="_blank">
+            <img class="icon" src="img/pictures/wa.svg" alt="">
+          </a>
+          <a class="btn btn-peach rounded-1 text-32" data-waved="light" href="" target="_blank">
+            <img class="icon" src="img/pictures/tg.svg" alt="">
+          </a>
+          <a class="btn btn-peach rounded-1 text-32" data-waved="light" href="" target="_blank">
+            <img class="icon" src="img/pictures/vk.svg" alt="">
+          </a>
+        </div>
+        <a class="hidden xl:flex btn link font-bold text-22" data-waved="dark" href="tel: 8 800 707 06 12">8 800 707 06 12</a>
+      </footer>
 
     </div>
   </div>

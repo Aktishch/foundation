@@ -1,5 +1,5 @@
 // Libraries
-// import yandexMap from './lib/yandex-map'
+import yandexMap from './lib/yandex-map'
 // import airDatepicker from './lib/air-datepicker'
 import fancybox from './lib/fancybox'
 import sliderSwiper from './lib/slider-swiper'
@@ -20,7 +20,7 @@ import waved from './ts/waved'
 // import movement from './ts/movement'
 // import bubbles from './ts/bubbles'
 // import listing from './ts/listing'
-// import accordion from './ts/accordion'
+import accordion from './ts/accordion'
 // import formatBg from './ts/format-bg'
 // import parallax from './ts/parallax'
 import filter from './ts/filter'
@@ -52,7 +52,6 @@ import './scss/index.scss'
 // Connection
 window.addEventListener('DOMContentLoaded', () => {
 
-  // // yandexMap.init()
   // airDatepicker.init()
   fancybox.init()
   sliderSwiper.init()
@@ -70,7 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // movement.init()
   // bubbles.init()
   // listing.init()
-  // accordion.init()
+  accordion.init()
   // formatBg.init()
   // parallax.init()
   filter.init()
@@ -98,6 +97,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('load', () => {
 
+  yandexMap.init()
   gsap.init()
   // warning.init()
   preloader.init()

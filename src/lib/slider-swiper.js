@@ -46,6 +46,48 @@ const init = () => {
 
   })
 
+  const videosSlider = new Swiper('.videos-slider .swiper', {
+
+    navigation: {
+
+      prevEl: '.videos-slider .swiper-button-prev',
+      nextEl: '.videos-slider .swiper-button-next'
+
+    },
+
+    slidesPerView: 1.1,
+    spaceBetween: 16,
+    slidesPerGroup: 1,
+    speed: 500,
+    grabCursor: true,
+
+    breakpoints: {
+
+      [media.sm]: {
+
+        slidesPerView: 1.6,
+        spaceBetween: 20
+
+      },
+
+      [media.md]: {
+
+        slidesPerView: 2,
+        spaceBetween: 24
+
+      },
+
+      [media.lg]: {
+
+        slidesPerView: 3,
+        spaceBetween: 36
+
+      }
+
+    }
+
+  })
+
   // const gallerySlider = new Swiper('.gallery-slider .swiper', {
 
   //   pagination: {

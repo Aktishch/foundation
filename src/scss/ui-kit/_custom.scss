@@ -1,8 +1,3 @@
-// Air-datepicker
-.air-datepicker-global-container {
-  z-index: 1100;
-}
-
 // Fancybox
 .fancybox {
   &__spinner {
@@ -83,13 +78,12 @@
       border-radius: 50%;
     }
 
-    @screen md {
-      &-prev:not(.default) {
-        left: -25px;
-      }
+    @screen xl {
 
+      &-prev:not(.default),
       &-next:not(.default) {
-        right: -25px;
+        width : 82px;
+        height: 82px;
       }
     }
   }

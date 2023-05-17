@@ -20,6 +20,14 @@
       <path fill-rule="evenodd" clip-rule="evenodd" d="M34 68C52.7777 68 68 52.7777 68 34C68 15.2223 52.7777 0 34 0C15.2223 0 0 15.2223 0 34C0 52.7777 15.2223 68 34 68ZM49.7552 28.5052C51.4149 26.8455 51.4149 24.1545 49.7552 22.4948C48.0955 20.8351 45.4045 20.8351 43.7448 22.4948L29.75 36.4896L24.2552 30.9948C22.5955 29.3351 19.9045 29.3351 18.2448 30.9948C16.5851 32.6545 16.5851 35.3455 18.2448 37.0052L26.7448 45.5052C28.4045 47.1649 31.0955 47.1649 32.7552 45.5052L49.7552 28.5052Z" fill="currentColor"/>
     </symbol>
 
+    <symbol id="arrow-left" width="100%" height="100%" viewBox="0 0 11 18">
+      <path d="M3.76777 9L9.88388 2.88388C10.372 2.39573 10.372 1.60427 9.88388 1.11612C9.39573 0.627961 8.60427 0.627961 8.11612 1.11612L1.11612 8.11612C0.62796 8.60427 0.62796 9.39573 1.11612 9.88388L8.11612 16.8839C8.60427 17.372 9.39573 17.372 9.88388 16.8839C10.372 16.3957 10.372 15.6043 9.88388 15.1161L3.76777 9Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="arrow-right" width="100%" height="100%" viewBox="0 0 11 18">
+      <path d="M7.23223 9L1.11612 2.88388C0.627961 2.39573 0.627961 1.60427 1.11612 1.11612C1.60427 0.627961 2.39573 0.627961 2.88388 1.11612L9.88388 8.11612C10.372 8.60427 10.372 9.39573 9.88388 9.88388L2.88388 16.8839C2.39573 17.372 1.60427 17.372 1.11612 16.8839C0.627961 16.3957 0.627961 15.6043 1.11612 15.1161L7.23223 9Z" fill="currentColor"/>
+    </symbol>
+
     <symbol id="car" width="100%" height="100%" viewBox="0 0 24 24">
       <path d="M7 19C8.10457 19 9 18.1046 9 17C9 15.8954 8.10457 15 7 15C5.89543 15 5 15.8954 5 17C5 18.1046 5.89543 19 7 19Z" fill="var(--color-none)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M17 19C18.1046 19 19 18.1046 19 17C19 15.8954 18.1046 15 17 15C15.8954 15 15 15.8954 15 17C15 18.1046 15.8954 19 17 19Z" fill="var(--color-none)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -53,6 +61,12 @@
 
     <symbol id="check" width="100%" height="100%" viewBox="0 0 24 24">
       <path d="M5 12L10 17L20 7" fill="var(--color-none)" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="question" width="100%" height="100%" viewBox="0 0 28 28">
+      <path d="M14 24.5C19.799 24.5 24.5 19.799 24.5 14C24.5 8.20101 19.799 3.5 14 3.5C8.20101 3.5 3.5 8.20101 3.5 14C3.5 19.799 8.20101 24.5 14 24.5Z" fill="var(--color-none)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M14 19.8333V19.8458" fill="var(--color-none)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13.9998 15.7501C13.9784 15.3714 14.0805 14.9959 14.2909 14.6803C14.5014 14.3647 14.8086 14.1259 15.1665 14.0001C15.605 13.8324 15.9986 13.5652 16.3163 13.2196C16.634 12.8739 16.8672 12.4592 16.9974 12.0081C17.1276 11.5571 17.1513 11.0819 17.0667 10.6201C16.9821 10.1583 16.7914 9.72247 16.5097 9.34688C16.228 8.97129 15.863 8.66621 15.4433 8.45567C15.0237 8.24512 14.5609 8.13486 14.0915 8.13356C13.622 8.13225 13.1586 8.23995 12.7378 8.44816C12.317 8.65638 11.9503 8.95942 11.6665 9.33344" fill="var(--color-none)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
   </defs>

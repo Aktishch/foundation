@@ -141,7 +141,7 @@
 
   &__circle {
     background: linear-gradient(191.35deg, #AECDED 21.52%, #EAF1F8 82.49%);
-    animation: specialist-circle 5s linear infinite;
+    animation : specialist-circle 5s linear infinite;
   }
 }
 
@@ -150,11 +150,48 @@
     transform: rotate(0);
   }
 
-  0% {
+  50% {
     transform: rotate(180deg);
   }
 
-  0% {
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+// О нас
+.about {
+  &__content {
+    background: radial-gradient(336.9% 105.08% at 0% 100%, rgba(255, 255, 255, 0.592) 0%, rgba(255, 255, 255, 0.232) 100%);
+  }
+
+  &__block {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), #CCE6FA;
+  }
+}
+
+// Видео
+.videos {
+  &-button {
+    &.swiper-button-disabled {
+      opacity   : 0;
+      visibility: hidden;
+    }
+  }
+}
+
+// Вопросы
+.questions {
+  &__accordion[data-accordion="active"] &__arrow {
+    transform: rotate(-90deg);
+  }
+}
+
+// Специалисты
+.specialists {
+  background-image: linear-gradient(0deg, rgba(235, 171, 218, 0.2) 0%, rgba(235, 171, 218, 0) 65.21%), linear-gradient(101.47deg, #AECDED 0%, #EAF1F8 100%);
+
+  &__content {
+    background-image: radial-gradient(98.48% 326.98% at 0% 3.35%, rgba(255, 255, 255, 0.63) 0%, rgba(255, 255, 255, 0.42) 100%);
   }
 }
