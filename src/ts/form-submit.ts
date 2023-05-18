@@ -1,7 +1,7 @@
 import formValidate from './functions/form-validate'
 import dialog from './functions/dialog'
 
-const formSubmit = (event: Event): void => {
+const formSubmit = (event: Event, data: File[]): void => {
 
   event.preventDefault()
 
@@ -14,6 +14,9 @@ const formSubmit = (event: Event): void => {
   const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement
 
   let requestUrl: string = ''
+  let dataFiles: File[] = data
+
+  if (dataFiles != null) for (let i = 0; i < dataFiles.length; i++) formData.append('file[]', dataFiles[i])
 
   if (form.dataset.form == 'submit') {
 
@@ -41,6 +44,10 @@ const formSubmit = (event: Event): void => {
 
       submitBtn.removeAttribute('disabled')
 
+      console.log(formData.getAll('file[]'))
+
+      // dataFiles = []
+
     }).catch((error: string): void =>
 
       console.log('The form has not been sent', error)
@@ -61,11 +68,11 @@ const formSubmit = (event: Event): void => {
 
 }
 
-const init = (): void => {
+const init = (data: File[]): void => {
 
   document.addEventListener('submit', ((event: Event): void => {
 
-    if ((event.target as HTMLFormElement).hasAttribute('data-form')) formSubmit(event)
+    if ((event.target as HTMLFormElement).hasAttribute('data-form')) formSubmit(event, data)
 
   }) as EventListener)
 

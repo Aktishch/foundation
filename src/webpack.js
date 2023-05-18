@@ -26,6 +26,7 @@ import accordion from './ts/accordion'
 import filter from './ts/filter'
 // import outNumber from './ts/out-number'
 // import writeText from './ts/write-text'
+import downloadFiles from './ts/download-files'
 import formSubmit from './ts/form-submit'
 // import formSave from './ts/form-save'
 // import choiceFile from './ts/choice-file'
@@ -75,7 +76,8 @@ window.addEventListener('DOMContentLoaded', () => {
   filter.init()
   // outNumber.init()
   // writeText.init()
-  formSubmit.init()
+  const datafiles =  downloadFiles.init()
+  formSubmit.init(datafiles)
   // formSave.init()
   // choiceFile.init()
   // copyLink.init()

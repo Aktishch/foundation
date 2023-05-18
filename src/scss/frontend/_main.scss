@@ -82,6 +82,13 @@
   }
 }
 
+// Проект
+.project {
+  &__content {
+    background: linear-gradient(58.13deg, rgba(235, 171, 218, 0.5) 0%, rgba(148, 134, 206, 0) 79.07%), linear-gradient(241.78deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 51.81%), #02274D;
+  }
+}
+
 // Строительство
 .construction {
   &__category.filter-active {

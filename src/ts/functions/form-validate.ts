@@ -1,21 +1,21 @@
-// import fileHandler from './file-handler'
+import fileHandler from './file-handler'
 import formInputs from '../form-inputs'
 
 const init = (form: HTMLFormElement): boolean => {
 
   const labels = form.querySelectorAll('*[data-label="input"]') as NodeListOf<Element>
-  // const download = form.querySelector('*[data-label="download"]') as HTMLElement
+  const download = form.querySelector('*[data-label="download"]') as HTMLElement
 
   let validate: boolean = true
 
-  // if (download) {
+  if (download) {
 
-  //   const input = download.querySelector('*[data-input="file"]') as HTMLInputElement
-  //   const error = download.querySelector('*[data-error]') as HTMLElement
+    const input = download.querySelector('*[data-input="file"]') as HTMLInputElement
+    const error = download.querySelector('*[data-error]') as HTMLElement
 
-  //   validate = fileHandler.init(input, error)
+    validate = fileHandler.init(input, error)
 
-  // }
+  }
 
   labels.forEach((element: Element): void => {
 

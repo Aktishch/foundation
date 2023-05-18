@@ -6,6 +6,16 @@ import media from '../ts/functions/media'
 
 const init = () => {
 
+  const projectSlider = new Swiper('.project-slider .swiper', {
+
+    slidesPerGroup: 1,
+    spaceBetween: 24,
+    direction: 'vertical',
+    slidesPerView: 'auto',
+    loop: true
+
+  })
+
   const constructionSlider = new Swiper('.construction-slider .swiper', {
 
     slidesPerView: 1.1,

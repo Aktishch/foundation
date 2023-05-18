@@ -224,6 +224,67 @@
   </div>
 </section>
 
+<!-- Проект -->
+
+<section class="project container flex items-center justify-between gap-10 relative bg-white overflow-hidden h-[1000px]">
+  <div class="project-slider w-full max-w-[540px] h-full">
+    <div class="swiper swiper--overwrap overflow-visible h-full">
+      <div class="swiper-wrapper">
+        <% for (var i = 0; i < 6; i++) { %>
+          <div class="swiper-slide h-auto">
+            <div class="pack pack-rect-sm bg-grey rounded-[48px]">
+              <div class="loader">
+                <span class="loader-progress">
+                  <svg class="loader-icon icon">
+                    <use xlink:href="img/icons.svg#loader">
+                  </svg>
+                </span>
+              </div>
+              <picture>
+                <source srcset="img/pictures/videos.webp" type="image/webp">
+                <img class="image image-rise" loading="lazy" src="img/pictures/videos.png" alt="">
+              </picture>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <div class="w-full max-w-[520px]">
+    <p class="font-normal text-14 sm:text-16 leading-4 mb-4 sm:mb-6">
+      Наша практика показывает, что более 90% проектов будущих домов содержат ошибки, просчеты и требуют доработки
+    </p>
+    <h2 class="font-alt font-medium text-26 md:text-36 leading-3 mb-6">
+      Присылайте ваш проект к нам на анализ, мы проверим его <span class="font-extrabold">уже сегодня</span>
+    </h2>
+    <p class="font-normal text-14 sm:text-16 leading-4 mb-6 sm:mb-8">
+      Проведем полную проверку согласно всем нормативам и предложим корректировки на начальной стадии строительства
+    </p>
+    <div class="project__content rounded-[48px] w-full max-w-[410px] p-10">
+      <form class="form text-white" data-form="submit">
+        <p class="font-semibold text-16 leading-4 mb-4">Прикрепите сканы или сделайте фотографии крупным планом</p>
+        <div class="form-wrapper mb-5" data-label="download">
+          <label class="btn btn-primary btn-lg btn-fade" data-waved="dark">
+            <input class="hidden" data-input="file" type="file" multiple>
+            Загрузить
+          </label>
+          <span class="form-error" data-error>Пожалуйста, загрузите изображение!</span>
+        </div>
+        <label class="form-label mb-6" data-label="input">
+          <span class="font-medium text-14 mb-2">Телефон для связи</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input" data-input="tel" type="tel" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _" name="tel">
+            </div>
+            <span class="form-error" data-error>Пожалуйста, введите ваш номер!</span>
+          </div>
+        </label>
+        <button class="btn btn-primary btn-lg btn-fill mb-5" data-waved="dark" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- Строительство -->
 
 <section class="construction container bg-grey overflow-hidden">
@@ -253,7 +314,7 @@
                   </div>
                   <picture>
                     <source srcset="img/pictures/foundation.webp" type="image/webp">
-                    <img class="image" src="img/pictures/foundation.jpg" alt="">
+                    <img class="image" loading="lazy" src="img/pictures/foundation.jpg" alt="">
                   </picture>
                 </div>
                 <div class="card-content pt-4 pb-6 px-4">
@@ -375,7 +436,7 @@
           </div>
           <picture>
             <source srcset="img/pictures/foundation.webp" type="image/webp">
-            <img class="image" src="img/pictures/foundation.jpg" alt="">
+            <img class="image" loading="lazy" src="img/pictures/foundation.jpg" alt="">
           </picture>
         </div>
         <picture>
@@ -432,7 +493,7 @@
               </div>
               <picture>
                 <source srcset="img/pictures/services-<%= services[i].img %>.webp" type="image/webp">
-                <img class="image image-rise" src="img/pictures/services-<%= services[i].img %>.jpg" alt="">
+                <img class="image image-rise" loading="lazy" src="img/pictures/services-<%= services[i].img %>.jpg" alt="">
               </picture>
               <div class="services__info flex items-end justify-center absolute inset-0 pointer-events-none py-6 px-4 md:px-6">
                 <h4 class="font-semibold text-center text-white text-20 leading-4"><%= services[i].text %></h4>
@@ -690,7 +751,7 @@
               </div>
               <picture>
                 <source srcset="img/pictures/videos.webp" type="image/webp">
-                <img class="image image-rise" src="img/pictures/videos.png" alt="">
+                <img class="image image-rise" loading="lazy" src="img/pictures/videos.png" alt="">
               </picture>
             </a>
           </div>
@@ -752,7 +813,7 @@
           </div>
           <picture>
             <source srcset="img/pictures/gallery-<%= gallery[i].img %>.webp" type="image/webp">
-            <img class="image image-rise" src="img/pictures/gallery-<%= gallery[i].img %>.jpg" alt="">
+            <img class="image image-rise" loading="lazy" src="img/pictures/gallery-<%= gallery[i].img %>.jpg" alt="">
           </picture>
         </a>
       </div>
