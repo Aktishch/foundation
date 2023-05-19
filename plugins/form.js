@@ -47,8 +47,7 @@ module.exports = plugin(
 
         '&-error': {
           fontSize: theme('fontSize.12'),
-          color: theme('colors.white.DEFAULT'),
-          backgroundColor: theme('colors.orange.DEFAULT'),
+          color: theme('colors.error.DEFAULT'),
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -56,12 +55,19 @@ module.exports = plugin(
           position: 'absolute',
           left: 0,
           right: 0,
-          bottom: '-16px',
-          height: '16px',
+          bottom: '-18px',
           opacity: 0,
           visibility: 'hidden',
-          borderRadius: '100px',
-          transition: '0.3s ease'
+          transition: '0.3s ease',
+
+          '&::before': {
+            content: '""',
+            display: 'block',
+            width: '14px',
+            height: '14px',
+            background: 'url("../img/pictures/danger.svg") no-repeat center / cover',
+            marginRight: '6px'
+          }
         }
       }
 

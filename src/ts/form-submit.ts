@@ -14,11 +14,14 @@ const formSubmit = (event: Event, data: File[]): void => {
   const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement
 
   let requestUrl: string = ''
-  let dataFiles: File[] = data
-
-  if (dataFiles != null) for (let i = 0; i < dataFiles.length; i++) formData.append('file[]', dataFiles[i])
 
   if (form.dataset.form == 'submit') {
+
+    if (form.hasAttribute('data-files')) {
+
+      if (data != null) for (let i = 0; i < data.length; i++) formData.append('file[]', data[i])
+
+    }
 
     requestUrl = '/ajax/submit-handler.php'
     submitBtn.setAttribute('disabled', 'disabled')
@@ -44,9 +47,19 @@ const formSubmit = (event: Event, data: File[]): void => {
 
       submitBtn.removeAttribute('disabled')
 
-      console.log(formData.getAll('file[]'))
+      if (form.hasAttribute('data-files')) {
 
-      // dataFiles = []
+        const ul = form.querySelector('*[data-files-list]') as HTMLElement
+        const text = form.querySelector('*[data-files-text]') as HTMLElement
+
+        ul.innerHTML = ''
+        text.innerHTML = 'Загрузить файлы'
+
+        console.log(formData.getAll('file[]'))
+
+        data.length = 0
+
+      }
 
     }).catch((error: string): void =>
 

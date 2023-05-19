@@ -8,11 +8,39 @@ const init = () => {
 
   const projectSlider = new Swiper('.project-slider .swiper', {
 
+    slidesPerView: 1.1,
     slidesPerGroup: 1,
-    spaceBetween: 24,
-    direction: 'vertical',
-    slidesPerView: 'auto',
-    loop: true
+    spaceBetween: 16,
+    speed: 1000,
+    direction: 'horizontal',
+    grabCursor: true,
+    loop: true,
+
+    breakpoints: {
+
+      [media.sm]: {
+
+        slidesPerView: 1.5,
+
+      },
+
+      [media.lg]: {
+
+        spaceBetween: 24,
+        direction: 'vertical',
+        slidesPerView: 'auto'
+
+      }
+
+    },
+
+    autoplay: {
+
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false
+
+    }
 
   })
 

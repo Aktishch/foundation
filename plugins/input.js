@@ -23,7 +23,7 @@ module.exports = plugin(
         },
 
         '&--error': {
-          borderColor: theme('colors.orange.DEFAULT')
+          borderColor: theme('colors.error.DEFAULT')
         },
 
         '&:first-of-type': {

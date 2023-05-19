@@ -84,8 +84,84 @@
 
 // Проект
 .project {
+  &-slider {
+
+    &::before,
+    &::after {
+      content       : "";
+      display       : none;
+      position      : absolute;
+      right         : 0;
+      left          : 0;
+      width         : 100%;
+      height        : 150px;
+      pointer-events: none;
+      z-index       : 10;
+    }
+
+    &::before {
+      top       : -80px;
+      background: linear-gradient(0, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    }
+
+    &::after {
+      bottom    : -80px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    }
+  }
+
+  &__warning {
+    animation: pulse 3s ease infinite both;
+  }
+
   &__content {
     background: linear-gradient(58.13deg, rgba(235, 171, 218, 0.5) 0%, rgba(148, 134, 206, 0) 79.07%), linear-gradient(241.78deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 51.81%), #02274D;
+  }
+
+  @screen lg {
+    &-slider {
+
+      &::before,
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.1);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: translateX(20px);
+  }
+
+  80% {
+    transform: translateX(-20px);
   }
 }
 

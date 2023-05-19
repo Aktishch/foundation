@@ -66,6 +66,10 @@ module.exports = {
 
       cream: {
         DEFAULT: '#FFC5A5'
+      },
+
+      error: {
+        DEFAULT: '#FF7878'
       }
 
     },
