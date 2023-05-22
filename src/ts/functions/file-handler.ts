@@ -14,7 +14,7 @@ const init = (input: HTMLInputElement, error: HTMLElement): boolean => {
     error.innerText = 'Только jpg, png или pdf!'
     return false
 
-  } else if (files[0].size > 2 * Math.pow(1024, 3)) {
+  } else if (files[0].size > 3 * Math.pow(1024, 2)) {
 
     error.classList.add('visible', 'opacity-100')
     error.innerText = 'Размер не более 3 мб!'

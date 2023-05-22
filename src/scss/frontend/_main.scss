@@ -57,6 +57,10 @@
 
 // Главный блок
 .main {
+  &__elem {
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
   &__item {
     &--blue {
       background-image: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 73.05%), radial-gradient(59.82% 533.8% at 30.65% 40.18%, rgba(90, 154, 249, 0.7) 0%, rgba(90, 154, 249, 0) 100%);
@@ -64,6 +68,14 @@
 
     &--orange {
       background-image: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 73.05%);
+    }
+  }
+
+  @screen lg {
+    &__elem {
+      transition-property: transform;
+      transform          : rotateY(calc(var(--x) * -50deg)) rotateX(calc(var(--y) * -30deg));
+      box-shadow         : calc(var(--x) * -20px) calc(var(--y) * -5px) 30px rgba(0, 0, 0, 0.2);
     }
   }
 }
@@ -276,5 +288,32 @@
 
   &__content {
     background-image: radial-gradient(98.48% 326.98% at 0% 3.35%, rgba(255, 255, 255, 0.63) 0%, rgba(255, 255, 255, 0.42) 100%);
+  }
+}
+
+// Звонок
+.call {
+  &__pack {
+    background: linear-gradient(0deg, rgba(235, 171, 218, 0.2) 0%, rgba(235, 171, 218, 0) 65.21%), linear-gradient(101.47deg, #AECDED 0%, #EAF1F8 100%);
+  }
+
+  &__bg {
+    background: radial-gradient(336.9% 105.08% at 0% 100%, rgba(255, 255, 255, 0.444) 0%, rgba(255, 255, 255, 0.174) 100%);
+  }
+
+  &__item {
+    animation: call-item 7s ease infinite both;
+  }
+}
+
+@keyframes call-item {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
   }
 }

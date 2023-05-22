@@ -22,7 +22,7 @@ import waved from './ts/waved'
 // import listing from './ts/listing'
 import accordion from './ts/accordion'
 // import formatBg from './ts/format-bg'
-// import parallax from './ts/parallax'
+import parallax from './ts/parallax'
 import filter from './ts/filter'
 // import outNumber from './ts/out-number'
 // import writeText from './ts/write-text'
@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // listing.init()
   accordion.init()
   // formatBg.init()
-  // parallax.init()
+  parallax.init()
   filter.init()
   // outNumber.init()
   // writeText.init()

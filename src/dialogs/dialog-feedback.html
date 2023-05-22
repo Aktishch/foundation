@@ -1,0 +1,56 @@
+<div class="dialog dialog-lg rounded-6 md:rounded-[48px] overflow-hidden">
+  <div class="call flex items-center justify-between">
+    <div class="call__pack pack pack-[110] hidden md:block w-full max-w-[460px]">
+      <div class="call__bg absolute inset-4 rounded-[48px] border-2 border-solid border-white border-opacity-20 shadow-sm"></div>
+      <picture>
+        <source srcset="img/pictures/call.webp" type="image/webp">
+        <img class="image image-scale-down image-bottom pt-8" src="img/pictures/call.png" alt="">
+      </picture>
+      <div class="absolute right-8 bottom-11 -rotate-6">
+        <div class="call__item flex items-center justify-center relative font-light bg-orange text-white text-10 rounded-[100px] w-max py-3 px-4 md:px-6" data-waved="dark">
+          Александр Кравченко
+          <svg class="icon absolute -top-3 -left-3 text-orange text-20 -scale-x-100">
+            <use xlink:href="img/icons.svg#arrow-to">
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="w-full max-w-[450px] xl:max-w-[500px] py-8 px-4 md:py-5 xl:py-10 md:px-8 xl:px-16 mx-auto md:mx-0">
+      <h2 class="font-alt font-semibold text-24 md:text-32 leading-3 mb-4">Отправьте заявку</h2>
+      <p class="font-normal text-14 xl:text-16 leading-3 opacity-60 mb-5 xl:mb-9">Оставьте заявку на бесплатную консультацию. <br class="hidden xs:block"> Мы перезвоним вам</p>
+      <form class="form w-full xl:max-w-[330px] mb-4" data-form="submit">
+        <label class="form-label mb-6" data-label="input">
+          <span class="font-medium text-14 mb-2">Телефон для связи</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input" data-input="tel" type="tel" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _" name="tel">
+            </div>
+            <span class="form-error" data-error>Пожалуйста, введите ваш номер!</span>
+          </div>
+        </label>
+        <button class="btn btn-primary btn-lg btn-fill" data-waved="light" type="submit">Заказать звонок</button>
+      </form>
+      <div class="link font-light text-12 leading-3 opacity-80 w-full xl:max-w-[330px] mb-5 sm:mb-8" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-politics.html">
+        Отправляя форму, Вы даете согласие на обработку <br class="hidden xs:block">
+        Ваших персональных данных
+      </div>
+      <div class="flex items-center justify-between gap-1 w-full xl:max-w-[330px]">
+        <div class="flex flex-col">
+          <span class="font-semibold text-14 xs:text-16 leading-1">Или вы можете</span>
+          <span class="font-normal text-12 xs:text-14 opacity-60">Задать вопрос напрямую</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <a class="btn btn-peach rounded-3 text-36 overflow-hidden" data-waved="light" href="" target="_blank">
+            <img class="icon" src="img/pictures/wa.svg" alt="">
+          </a>
+          <a class="btn btn-peach rounded-3 text-36 overflow-hidden" data-waved="light" href="" target="_blank">
+            <img class="icon" src="img/pictures/tg.svg" alt="">
+          </a>
+          <a class="btn btn-peach rounded-3 text-36 overflow-hidden" data-waved="light" href="" target="_blank">
+            <img class="icon" src="img/pictures/vk.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

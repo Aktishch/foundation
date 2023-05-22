@@ -54,9 +54,6 @@ const formSubmit = (event: Event, data: File[]): void => {
 
         ul.innerHTML = ''
         text.innerHTML = 'Загрузить файлы'
-
-        console.log(formData.getAll('file[]'))
-
         data.length = 0
 
       }
@@ -71,7 +68,7 @@ const formSubmit = (event: Event, data: File[]): void => {
 
   if (form.dataset.form == 'params') {
 
-    requestUrl = `/dialogs/dialog-authorization.html?${queryString}`
+    requestUrl = `/dialogs/dialog-feedback.html?${queryString}`
 
     dialog.close()
 
