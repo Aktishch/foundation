@@ -48,7 +48,7 @@
     </div>
     <div class="main__btns flex flex-col md:flex-row md:items-center gap-4">
       <button class="btn btn-primary btn-lg btn-fill px-1 md:px-8" data-waved="light" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-feedback.html">Получить консультацию инженера</button>
-      <button class="btn btn-primary btn-lg btn-fade text-black px-1 md:px-8" data-waved="light">Рассчитать стоимость</button>
+      <a class="btn btn-primary btn-lg btn-fade text-black px-1 md:px-8" data-waved="light" data-scroll href="#calculation">Рассчитать стоимость</a>
     </div>
   </div>
   <div class="relative w-full max-w-[790px] ml-auto mr-auto xl:ml-0 xl:-mr-80">
@@ -83,10 +83,10 @@
 
 <!-- Расчет -->
 
-<section class="calculation container relative overflow-hidden md:py-10">
+<section class="calculation container relative overflow-hidden md:py-10" id="calculation">
   <picture>
     <source srcset="img/pictures/doc.webp" type="image/webp">
-    <img class="hidden lg:block absolute bottom-0 left-[40%] w-full max-w-[1160px]" src="img/pictures/doc.png" alt="">
+    <img class="calculation__doc hidden lg:block absolute bottom-0 left-[40%] w-full max-w-[1160px]" src="img/pictures/doc.png" alt="">
   </picture>
   <picture>
     <source srcset="img/pictures/doc-min.webp" type="image/webp">
@@ -94,14 +94,14 @@
   </picture>
   <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-10 relative">
     <div class="flex flex-col">
-      <h2 class="font-alt font-medium uppercase text-26 md:text-32 lg:text-42 leading-3 mb-4 lg:mb-12" data-speed="1.1">
+      <h2 class="calculation__title font-alt font-medium uppercase text-26 md:text-32 lg:text-42 leading-3 mb-4 lg:mb-12" data-speed="1.1">
         Рассчитайте <br>
         <span class="font-extrabold">предварительную <br>
         стоимость</span> фундамента
       </h2>
-      <h3 class="font-semibold text-16 md:text-18 lg:text-20 mb-8 lg:mb-16">Заполнив небольшую форму, вы получите:</h3>
+      <h3 class="calculation__subtitle font-semibold text-16 md:text-18 lg:text-20 mb-8 lg:mb-16" data-speed="1.1">Заполнив небольшую форму, вы получите:</h3>
       <div class="flex flex-col lg:items-start gap-3 md:gap-5 lg:gap-10">
-        <div class="flex items-center bg-white rounded-4 shadow-sm py-2 pl-2 pr-10 lg:ml-12">
+        <div class="calculation__item flex items-center bg-white rounded-4 shadow-sm py-2 pl-2 pr-10 lg:ml-12" data-speed="1.1">
           <div class="calculation__image flex items-center justify-center bg-primary rounded-4 md:rounded-6 min-w-[52px] w-[52px] h-[52px] md:min-w-[64px] md:w-[64px] md:h-[64px] mr-4 md:mr-6">
             <svg class="icon text-white text-32">
               <use xlink:href="img/icons.svg#crown">
@@ -112,7 +112,7 @@
             <span class="font-normal text-12 md:text-14 leading-4">Предоставим точный и понятный сметный расчет</span>
           </div>
         </div>
-        <div class="flex items-center bg-white rounded-4 shadow-sm py-2 pl-2 pr-10">
+        <div class="calculation__item flex items-center bg-white rounded-4 shadow-sm py-2 pl-2 pr-10" data-speed="1.1">
           <div class="calculation__image flex items-center justify-center bg-primary rounded-4 md:rounded-6 min-w-[52px] w-[52px] h-[52px] md:min-w-[64px] md:w-[64px] md:h-[64px] mr-4 md:mr-6">
             <svg class="icon text-white text-32">
               <use xlink:href="img/icons.svg#crown">
@@ -123,7 +123,7 @@
             <span class="font-normal text-12 md:text-14 leading-4">Предоставим точный и понятный сметный расчет</span>
           </div>
         </div>
-        <div class="flex items-center bg-white rounded-4 shadow-sm py-2 pl-2 pr-10 lg:ml-12">
+        <div class="calculation__item flex items-center bg-white rounded-4 shadow-sm py-2 pl-2 pr-10 lg:ml-12" data-speed="1.1">
           <div class="calculation__image flex items-center justify-center bg-primary rounded-4 md:rounded-6 min-w-[52px] w-[52px] h-[52px] md:min-w-[64px] md:w-[64px] md:h-[64px] mr-4 md:mr-6">
             <svg class="icon text-white text-32">
               <use xlink:href="img/icons.svg#crown">
@@ -198,7 +198,7 @@
             <div class="input-cover">
               <textarea class="input h-[60px]" data-input="text" type="text" name="text"></textarea>
             </div>
-            <span class="form-error" data-error>Пожалуйста, оставьте комментарий!</span>
+            <span class="form-error" data-error>Пожалуйста, заполните поле!</span>
           </div>
         </label>
         <button class="btn btn-primary btn-lg btn-fill mb-6 px-1 sm:px-10" data-waved="light" type="submit">Получить расчет фундамента</button>
@@ -232,7 +232,7 @@
       <div class="swiper-wrapper">
         <% for (var i = 0; i < 6; i++) { %>
           <div class="swiper-slide h-auto">
-            <div class="pack pack-rect-sm bg-grey rounded-6 lg:rounded-[48px] duration-3">
+            <a class="pack pack-rect-sm bg-grey rounded-6 lg:rounded-[48px] duration-3" data-fancybox="project" href="https://www.youtube.com/watch?v=U5ZfQXJ-8DM">
               <div class="loader">
                 <span class="loader-progress">
                   <svg class="loader-icon icon">
@@ -244,7 +244,7 @@
                 <source srcset="img/pictures/videos.webp" type="image/webp">
                 <img class="image image-rise" loading="lazy" src="img/pictures/videos.png" alt="">
               </picture>
-            </div>
+            </a>
           </div>
         <% } %>
       </div>
@@ -275,16 +275,16 @@
     </div>
   </div>
   <div class="order-1 lg:order-2 w-full lg:max-w-[520px]">
-    <p class="font-normal text-14 sm:text-16 leading-4 mb-4 sm:mb-6">
+    <p class="project__text font-normal text-14 sm:text-16 leading-4 mb-4 sm:mb-6" data-speed="1.1">
       Наша практика показывает, что более 90% проектов будущих домов содержат ошибки, просчеты и требуют доработки
     </p>
-    <h2 class="font-alt font-medium text-26 md:text-36 leading-3 mb-6">
+    <h2 class="project__title font-alt font-medium text-26 md:text-36 leading-3 mb-6" data-speed="1.1">
       Присылайте ваш проект к нам на анализ, мы проверим его <span class="font-extrabold">уже сегодня</span>
     </h2>
-    <p class="font-normal text-14 sm:text-16 leading-4 mb-6 sm:mb-8">
+    <p class="project__text font-normal text-14 sm:text-16 leading-4 mb-6 sm:mb-8" data-speed="1.1">
       Проведем полную проверку согласно всем нормативам и предложим корректировки на начальной стадии строительства
     </p>
-    <div class="project__content rounded-6 lg:rounded-[48px] w-full md:max-w-[410px] py-10 px-5 md:px-10 mx-auto lg:mx-0">
+    <div class="project__content rounded-6 lg:rounded-[48px] w-full md:max-w-[410px] py-10 px-5 md:px-10 mx-auto lg:mx-0" data-speed="1.1">
       <form class="form text-white" data-form="submit" data-files>
         <p class="font-semibold text-16 leading-4 mb-4">Прикрепите сканы или сделайте фотографии крупным планом</p>
         <div class="form-wrapper mb-5" data-label="download">
@@ -319,13 +319,13 @@
 
 <!-- Строительство -->
 
-<section class="construction container bg-grey overflow-hidden">
-  <h2 class="font-alt font-medium uppercase sm:text-center text-26 md:text-32 lg:text-42 leading-3 mb-4">
+<section class="construction container bg-grey overflow-hidden" id="construction">
+  <h2 class="construction__title font-alt font-medium uppercase sm:text-center text-26 md:text-32 lg:text-42 leading-3 mb-4">
     Занимаемся <br class="sm:hidden"> строительством <br class="xl:hidden"> <span class="font-extrabold">с 2015 года</span>
   </h2>
-  <h3 class="font-normal sm:text-center text-16 leading-4 mb-10 lg:mb-12">Учитываем все пожелания и строго соблюдаем нормативы</h3>
+  <h3 class="construction__subtitle font-normal sm:text-center text-16 leading-4 mb-10 lg:mb-12">Учитываем все пожелания и строго соблюдаем нормативы</h3>
   <div data-filter>
-    <div class="hidden sm:flex items-center justify-between gap-2 bg-primary bg-opacity-20 rounded-[100px] w-max p-1 mx-auto mb-6 lg:mb-12">
+    <div class="construction__btns hidden sm:flex items-center justify-between gap-2 bg-primary bg-opacity-20 rounded-[100px] w-max p-1 mx-auto mb-6 lg:mb-12">
       <button class="construction__category filter-active btn btn-primary btn-lg text-black" data-filter-category="category-1" data-waved="dark">Фундаменты</button>
       <button class="construction__category btn btn-primary btn-lg text-black" data-filter-category="category-2" data-waved="dark">Дома под ключ</button>
     </div>
@@ -335,24 +335,26 @@
         <div class="construction-wrapper swiper-wrapper flex sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 lg:gap-8">
           <% for (var i = 0; i < 6; i++) { %>
             <div class="swiper-slide h-auto">
-              <div class="card h-full" data-waved="dark">
-                <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
-                  <div class="loader">
-                    <span class="loader-progress">
-                      <svg class="loader-icon icon">
-                        <use xlink:href="img/icons.svg#loader">
-                      </svg>
-                    </span>
+              <div class="construction__item h-full">
+                <div class="card h-full" data-waved="dark">
+                  <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
+                    <div class="loader">
+                      <span class="loader-progress">
+                        <svg class="loader-icon icon">
+                          <use xlink:href="img/icons.svg#loader">
+                        </svg>
+                      </span>
+                    </div>
+                    <picture>
+                      <source srcset="img/pictures/foundation.webp" type="image/webp">
+                      <img class="image" loading="lazy" src="img/pictures/foundation.jpg" alt="">
+                    </picture>
                   </div>
-                  <picture>
-                    <source srcset="img/pictures/foundation.webp" type="image/webp">
-                    <img class="image" loading="lazy" src="img/pictures/foundation.jpg" alt="">
-                  </picture>
-                </div>
-                <div class="card-content pt-4 pb-6 px-4">
-                  <p class="font-semibold text-16 mb-1">Проект А 10</p>
-                  <p class="font-normal text-16 opacity-60 mb-3">Общая площадь 55 м<sup>2</sup></p>
-                  <p class="font-semibold text-20 mt-auto">2 300 000 ₽</p>
+                  <div class="card-content pt-4 pb-6 px-4">
+                    <p class="font-semibold text-16 mb-1">Проект А 10</p>
+                    <p class="font-normal text-16 opacity-60 mb-3">Общая площадь 55 м<sup>2</sup></p>
+                    <p class="font-semibold text-20 mt-auto">2 300 000 ₽</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -366,24 +368,26 @@
         <div class="construction-wrapper swiper-wrapper flex sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 lg:gap-8">
           <% for (var i = 0; i < 6; i++) { %>
             <div class="swiper-slide h-auto">
-              <div class="card h-full" data-waved="dark">
-                <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
-                  <div class="loader">
-                    <span class="loader-progress">
-                      <svg class="loader-icon icon">
-                        <use xlink:href="img/icons.svg#loader">
-                      </svg>
-                    </span>
+              <div class="construction__item h-full">
+                <div class="card h-full" data-waved="dark">
+                  <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
+                    <div class="loader">
+                      <span class="loader-progress">
+                        <svg class="loader-icon icon">
+                          <use xlink:href="img/icons.svg#loader">
+                        </svg>
+                      </span>
+                    </div>
+                    <picture>
+                      <source srcset="img/pictures/foundation.webp" type="image/webp">
+                      <img class="image" src="img/pictures/foundation.jpg" alt="">
+                    </picture>
                   </div>
-                  <picture>
-                    <source srcset="img/pictures/foundation.webp" type="image/webp">
-                    <img class="image" src="img/pictures/foundation.jpg" alt="">
-                  </picture>
-                </div>
-                <div class="card-content pt-4 pb-6 px-4">
-                  <p class="font-semibold text-16 mb-1">Проект А 10</p>
-                  <p class="font-normal text-16 opacity-60 mb-3">Общая площадь 55 м<sup>2</sup></p>
-                  <p class="font-semibold text-20 mt-auto">2 300 000 ₽</p>
+                  <div class="card-content pt-4 pb-6 px-4">
+                    <p class="font-semibold text-16 mb-1">Проект А 10</p>
+                    <p class="font-normal text-16 opacity-60 mb-3">Общая площадь 55 м<sup>2</sup></p>
+                    <p class="font-semibold text-20 mt-auto">2 300 000 ₽</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -407,12 +411,12 @@
   </div>
   <div class="flex flex-col xl:flex-row justify-between gap-6 md:gap-10 relative text-white">
     <div class="flex flex-col w-full xl:max-w-[370px]">
-      <h2 class="font-alt font-medium uppercase text-26 md:text-36 leading-3 mb-4 md:mb-6 xl:pt-10">
+      <h2 class="feedback__title font-alt font-medium uppercase text-26 md:text-36 leading-3 mb-4 md:mb-6 xl:pt-10">
         Не знаете <span class="font-extrabold">какой <br class="hidden xl:block">
         фундамент <br class="hidden lg:block xl:hidden"> </span> нужен <br class="hidden xl:block">
         именно вам?
       </h2>
-      <p class="font-light text-14 md:text-16 leading-4 opacity-90">Предложим Вам именно тот тип фундамента, который будет оптимальный по цене и подходит под конкретно ваш участок, учитывая особенности грунта и других важных факторов.</p>
+      <p class="feedback__subtitle font-light text-14 md:text-16 leading-4 opacity-90">Предложим Вам именно тот тип фундамента, который будет оптимальный по цене и подходит под конкретно ваш участок, учитывая особенности грунта и других важных факторов.</p>
     </div>
     <div class="feedback__content flex flex-col md:flex-row items-end lg:items-center md:justify-between gap-8 md:gap-10 rounded-6 lg:rounded-[48px] w-full xl:max-w-[800px] pt-8 pb-4 px-4 lg:pt-4">
       <div class="flex flex-col relative z-1 w-full md:max-w-[400px] xl:max-w-[320px] lg:pl-4">
@@ -501,12 +505,12 @@
   }
 ] %>
 
-<section class="services container bg-white overflow-hidden">
-  <h2 class="font-alt font-medium uppercase sm:text-center text-26 md:text-32 lg:text-42 leading-3 mb-4 md:mb-9 xl:mb-16">
+<section class="services container bg-white overflow-hidden" id="services">
+  <h2 class="services__title font-alt font-medium uppercase sm:text-center text-26 md:text-32 lg:text-42 leading-3 mb-4 md:mb-9 xl:mb-16">
     ОКАЗЫВАЕМ <span class="font-extrabold">ПОЛНЫЙ КОМПЛЕКС УСЛУГ</span> <br class="hidden md:block">
     в монолитном строительстве
   </h2>
-  <h3 class="sm:hidden font-normal text-14 mb-8">
+  <h3 class="services__subtitle sm:hidden font-normal text-14 mb-8">
     Учитываем все пожелания и строго <br>
     соблюдаем нормативы
   </h3>
@@ -515,20 +519,22 @@
       <div class="services-wrapper swiper-wrapper flex sm:grid sm:grid-cols-2 xl:grid-cols-4 sm:gap-6">
         <% for (var i = 0; i < services.length; i++) { %>
           <div class="swiper-slide h-auto">
-            <div class="pack pack-sheet sm:pack-rect-lg xl:pack-[140] bg-grey rounded-6 lg:rounded-[48px] h-full">
-              <div class="loader">
-                <span class="loader-progress">
-                  <svg class="loader-icon icon">
-                    <use xlink:href="img/icons.svg#loader">
-                  </svg>
-                </span>
-              </div>
-              <picture>
-                <source srcset="img/pictures/services-<%= services[i].img %>.webp" type="image/webp">
-                <img class="image image-rise" loading="lazy" src="img/pictures/services-<%= services[i].img %>.jpg" alt="">
-              </picture>
-              <div class="services__info flex items-end justify-center absolute inset-0 pointer-events-none py-6 px-4 md:px-6">
-                <h4 class="font-semibold text-center text-white text-20 leading-4"><%= services[i].text %></h4>
+            <div class="services__item h-full">
+              <div class="pack pack-sheet sm:pack-rect-lg xl:pack-[140] bg-grey rounded-6 lg:rounded-[48px] h-full">
+                <div class="loader">
+                  <span class="loader-progress">
+                    <svg class="loader-icon icon">
+                      <use xlink:href="img/icons.svg#loader">
+                    </svg>
+                  </span>
+                </div>
+                <picture>
+                  <source srcset="img/pictures/services-<%= services[i].img %>.webp" type="image/webp">
+                  <img class="image image-rise" loading="lazy" src="img/pictures/services-<%= services[i].img %>.jpg" alt="">
+                </picture>
+                <div class="services__info flex items-end justify-center absolute inset-0 pointer-events-none py-6 px-4 md:px-6">
+                  <h4 class="font-semibold text-center text-white text-20 leading-4"><%= services[i].text %></h4>
+                </div>
               </div>
             </div>
           </div>
@@ -541,7 +547,7 @@
 <!-- Специалист -->
 
 <section class="specialist container container--xs bg-grey">
-  <h2 class="font-alt font-medium uppercase md:text-center text-26 md:text-32 lg:text-42 leading-3 mb-9 lg:mb-12">
+  <h2 class="specialist__title font-alt font-medium uppercase md:text-center text-26 md:text-32 lg:text-42 leading-3 mb-9 lg:mb-12">
     <span class="font-extrabold">Бесплатно</span> вызовите нашего <br class="hidden md:block">
     специалиста <span class="font-extrabold">в удобное для Вас время</span>
   </h2>
@@ -555,7 +561,7 @@
       <div class="specialist__circle absolute top-[45%] xs:top-[40%] sm:top-[35%] md:-top-[43%] left-[-55%] sm:left-[-28%] md:left-auto md:-right-[63%] lg:-right-[35%] xl:-right-[25%] rounded-max w-[730px] h-[730px] md:w-[890px] md:h-[890px] my-0"></div>
       <picture>
         <source srcset="img/pictures/roulette.webp" type="image/webp">
-        <img class="hidden xl:block absolute top-[50%] left-[43%] -translate-x-[50%] -translate-y-[50%] w-full max-w-[490px]" src="img/pictures/roulette.png" alt="">
+        <img class="hidden xl:block absolute top-[50%] left-[43%] -translate-x-[50%] -translate-y-[50%] w-full max-w-[490px]" data-lag="0.2" src="img/pictures/roulette.png" alt="">
       </picture>
     </div>
     <div class="flex flex-col md:flex-row md:justify-between gap-20 md:gap-5 relative p-6 lg:p-14">
@@ -635,7 +641,7 @@
 <!-- О нас -->
 
 <section class="about container bg-white pb-0">
-  <h2 class="xl:hidden font-alt font-medium text-26 md:text-32 lg:text-42 leading-3 mb-14">
+  <h2 class="about__title xl:hidden font-alt font-medium text-26 md:text-32 lg:text-42 leading-3 mb-14" data-speed="1.1">
     Доверьте <span class="font-extrabold">строительство
     фундамента</span> для вашего
     дома команде Кравченко
@@ -679,21 +685,21 @@
       </div>
     </div>
     <div class="flex flex-col items-start w-full lg:max-w-[560px]">
-      <h2 class="hidden xl:block font-alt font-medium text-26 md:text-32 lg:text-42 leading-3 mb-6">
+      <h2 class="about__title hidden xl:block font-alt font-medium text-26 md:text-32 lg:text-42 leading-3 mb-6" data-speed="1.1">
         Доверьте <span class="font-extrabold">строительство
         фундамента</span> для вашего
         дома команде Кравченко
       </h2>
-      <p class="font-semibold text-16 leading-4 mb-8 md:mb-5">
+      <p class="font-semibold text-16 leading-4 mb-8 md:mb-5" data-speed="1.1">
         Уже больше 5 лет я помогаю людям и являюсь самым популярным экспертом в сфере недвижимости, строительства и ремонта в Краснодаре. 
       </p>
-      <p class="text-14 leading-4 mb-8 md:mb-5">
+      <p class="text-14 leading-4 mb-8 md:mb-5" data-speed="1.1">
         Я завязал доверие к своей команде на личной гарантии. И к выбору сотрудников в команду подхожу крайне избирательно. Я достаточно строг с коллективом, и те, кто подводит клиентов, меня и мою команду, покидают наши ряды немедленно и навсегда. Таким образом, Вы всегда можете быть уверены, что, если человек в команде, значит он молодец и я за него ручаюсь.
       </p>
-      <p class="font-bold text-18 md:text-20 leading-4 mb-8 md:mb-5">
+      <p class="font-bold text-18 md:text-20 leading-4 mb-8 md:mb-5" data-speed="1.1">
         Комплекс работ при проектировании и строительстве фундаментов и частных домов
       </p>
-      <ul class="flex flex-col items-start gap-3">
+      <ul class="flex flex-col items-start gap-3" data-speed="1.1">
         <li class="flex sm:items-center">
           <svg class="icon text-peach text-16 mt-1 mr-2 sm:mt-0">
             <use xlink:href="img/icons.svg#check">
@@ -828,13 +834,13 @@
   }
 ] %>
 
-<section class="container bg-grey xxl:w-[1920px] xxl:mx-auto xl:px-8">
-  <h2 class="font-alt font-medium uppercase md:text-center text-26 md:text-32 lg:text-42 leading-3 mb-5 md:mb-10 lg:mb-16">
+<section class="gallery container bg-grey xxl:w-[1920px] xxl:mx-auto xl:px-8">
+  <h2 class="gallery__title font-alt font-medium uppercase md:text-center text-26 md:text-32 lg:text-42 leading-3 mb-5 md:mb-10 lg:mb-16">
     <span class="font-extrabold">Более 900 семей</span> нас рекомендуют
   </h2>
   <div class="grid grid-cols-2 lg:grid-cols-4 auto-rows-[110px] xs:auto-rows-[160px] md:auto-rows-[220px] lg:auto-rows-[170px] xl:auto-rows-[285px] gap-3">
     <% for (var i = 0; i < gallery.length; i++) { %>
-      <div class="<%= gallery[i].item %>">
+      <div class="gallery__item <%= gallery[i].item %>">
         <a class="pack h-full bg-white rounded-3 xl:rounded-6" data-fancybox="gallery" href="img/pictures/gallery-<%= gallery[i].img %>.jpg">
           <div class="loader">
             <span class="loader-progress">
@@ -856,13 +862,13 @@
 <!-- Вопросы -->
 
 <section class="questions container bg-white">
-  <h2 class="font-alt font-medium uppercase md:text-center text-26 md:text-32 lg:text-42 leading-3 mb-2 sm:mb-7 lg:mb-10">
+  <h2 class="questions__title font-alt font-medium uppercase md:text-center text-26 md:text-32 lg:text-42 leading-3 mb-2 sm:mb-7 lg:mb-10" data-speed="1.1">
     Возможно у вас <span class="font-extrabold">остались вопросы</span>
   </h2>
   <div class="grid xl:grid-cols-2 xl:gap-12">
     <div class="flex flex-col xl:gap-12">
       <% for (var i = 0; i < 3; i++) { %>
-        <div class="questions__accordion border-b border-solid border-b-black border-opacity-30 py-4 sm:py-6" data-accordion="hidden">
+        <div class="questions__accordion border-b border-solid border-b-black border-opacity-30 py-4 sm:py-6" data-accordion="hidden" data-speed="1.1">
           <div class="flex items-center justify-between link-wrapper gap-5" data-accordion-toggle>
             <div class="flex items-center">
               <svg class="icon text-peach text-28 mr-3 sm:mr-5">
@@ -884,7 +890,7 @@
     </div>
     <div class="flex flex-col xl:gap-12">
       <% for (var i = 0; i < 3; i++) { %>
-        <div class="questions__accordion border-b border-solid border-b-black border-opacity-30 py-4 sm:py-6" data-accordion="hidden">
+        <div class="questions__accordion border-b border-solid border-b-black border-opacity-30 py-4 sm:py-6" data-accordion="hidden" data-speed="1.1">
           <div class="flex items-center justify-between link-wrapper gap-5" data-accordion-toggle>
             <div class="flex items-center">
               <svg class="icon text-peach text-28 mr-3 sm:mr-5">
@@ -919,7 +925,7 @@
     </div>
   </div>
   <div class="flex flex-col items-start gap-6 relative">
-    <div class="order-2 flex items-center justify-center lg:absolute lg:-bottom-12 lg:-right-40 xl:-right-10 w-full lg:max-w-[800px]">
+    <div class="specialists__team order-2 flex items-center justify-center lg:absolute lg:-bottom-12 lg:-right-40 xl:-right-10 w-full lg:max-w-[800px]">
       <picture>
         <source srcset="img/pictures/team.webp" type="image/webp">
         <img class="block w-[400px] xs:w-full max-w-none" src="img/pictures/team.png" alt="">
@@ -937,7 +943,7 @@
             <div class="input-cover">
               <textarea class="input h-[160px]" data-input="text" type="text" name="text"></textarea>
             </div>
-            <span class="form-error" data-error>Пожалуйста, оставьте вопрос!</span>
+            <span class="form-error" data-error>Пожалуйста, заполните поле!</span>
           </div>
         </label>
         <label class="form-label mb-8" data-label="input">

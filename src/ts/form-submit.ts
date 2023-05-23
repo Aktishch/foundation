@@ -41,7 +41,7 @@ const formSubmit = (event: Event, data: File[]): void => {
 
       dialog.close()
 
-      dialog.open('/dialogs/dialog-submit.html')
+      dialog.open('/dialogs/dialog-submit.php')
 
       form.reset()
 
@@ -68,7 +68,7 @@ const formSubmit = (event: Event, data: File[]): void => {
 
   if (form.dataset.form == 'params') {
 
-    requestUrl = `/dialogs/dialog-feedback.html?${queryString}`
+    requestUrl = `/dialogs/dialog-feedback.php?${queryString}`
 
     dialog.close()
 

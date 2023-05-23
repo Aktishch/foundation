@@ -243,8 +243,7 @@ module.exports = {
     require('./plugins/form'),
     require('./plugins/input'),
     require('./plugins/button'),
-    require('./plugins/switch'),
-    // require('./plugins/animation')
+    require('./plugins/switch')
 
   ]
 

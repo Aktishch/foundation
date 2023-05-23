@@ -15,12 +15,6 @@ const inputNumber = (event: Event): void => {
 
 }
 
-const inputEmail = (input: HTMLInputElement): boolean => {
-
-  return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
-
-}
-
 const init = (): void => {
 
   document.addEventListener('input', ((event: Event): void => {
@@ -33,4 +27,4 @@ const init = (): void => {
 
 }
 
-export default { init, inputEmail }
+export default { init }

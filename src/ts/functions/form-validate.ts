@@ -1,5 +1,4 @@
 import fileHandler from './file-handler'
-import formInputs from '../form-inputs'
 
 const init = (form: HTMLFormElement): boolean => {
 
@@ -87,18 +86,6 @@ const init = (form: HTMLFormElement): boolean => {
 
       }
 
-      if (input.dataset.input == 'email') {
-
-        if (formInputs.inputEmail(input)) inputError()
-
-      }
-
-      if (input.dataset.input == 'select') {
-
-        if (input.value == '0') inputError()
-
-      }
-
       if (input.dataset.input == 'text') {
 
         if (input.value.length > 0 && input.value.length < 10) {
@@ -109,7 +96,7 @@ const init = (form: HTMLFormElement): boolean => {
 
         } else {
 
-          error.innerText = 'Пожалуйста, оставьте отзыв!'
+          error.innerText = 'Пожалуйста, заполните поле!'
 
         }
 
