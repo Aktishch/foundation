@@ -53,6 +53,7 @@ const formSubmit = (event: Event, data: File[]): void => {
         const text = form.querySelector('*[data-files-text]') as HTMLElement
 
         ul.innerHTML = ''
+        ul.classList.remove('mb-5')
         text.innerHTML = 'Загрузить файлы'
         data.length = 0
 
