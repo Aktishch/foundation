@@ -3,6 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ScrollSmoother from './scroll-smoother'
 
 const createAnimations = () => {
+
   {
     const header = document.querySelector('*[data-header]')
 
@@ -35,47 +36,47 @@ const createAnimations = () => {
 
       }
     })
-    .from('.main__title', {
-      x: -50,
-      opacity: 0
+      .from('.main__title', {
+        x: -50,
+        opacity: 0
 
-    })
-    .from('.main__subtitle', {
-      x: -50,
-      opacity: 0,
-      stagger: 0.05
+      })
+      .from('.main__subtitle', {
+        x: -50,
+        opacity: 0,
+        stagger: 0.05
 
-    })
-    .from('.main__elems', {
-      y: 50,
-      opacity: 0,
-      stagger: 0.1
+      })
+      .from('.main__elems', {
+        y: 50,
+        opacity: 0,
+        stagger: 0.1
 
-    })
-    .from('.main__btns', {
-      y: 50,
-      opacity: 0,
-      stagger: 0.15
+      })
+      .from('.main__btns', {
+        y: 50,
+        opacity: 0,
+        stagger: 0.15
 
-    })
-    .from('.main__bg', {
-      y: 70,
-      opacity: 0,
-      stagger: 0.2
+      })
+      .from('.main__bg', {
+        y: 70,
+        opacity: 0,
+        stagger: 0.2
 
-    })
-    .from('.main__item--blue', {
-      x: 50,
-      opacity: 0,
-      stagger: 0.3
+      })
+      .from('.main__item--blue', {
+        x: 50,
+        opacity: 0,
+        stagger: 0.3
 
-    })
-    .from('.main__item--orange', {
-      x: -50,
-      opacity: 0,
-      stagger: 0.35
+      })
+      .from('.main__item--orange', {
+        x: -50,
+        opacity: 0,
+        stagger: 0.35
 
-    })
+      })
 
   }
 

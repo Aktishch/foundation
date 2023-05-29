@@ -6,6 +6,7 @@ const init = (): void => {
   const parallaxItems = body.querySelectorAll('*[data-parallax]') as NodeListOf<Element>
 
   parallaxItems.forEach((element: Element): void => {
+
     const parallaxItem = element as HTMLElement
 
     if (!parallaxItem) return
@@ -13,11 +14,12 @@ const init = (): void => {
     parallaxItem.style.setProperty('--y', '0.3')
     parallaxItem.style.setProperty('--x', '0.01')
 
-    function mousemoveHandler(event: MouseEvent){
-      requestAnimationFrame(()=>{
-        console.log('mousemoveHandler');
-        
+    const mousemoveHandler = (event: MouseEvent) => {
+
+      requestAnimationFrame(() => {
+
         const coordinates: coordinates = {
+
           top: event.clientY / window.innerHeight,
           left: event.clientX / window.innerWidth
 
