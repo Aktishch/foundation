@@ -504,7 +504,6 @@ const init = () => {
       wrapper: '#smooth-wrapper',
       content: '#smooth-content',
       smooth: 4,
-      smoothTouch: 1,
       effects: true
 
     })
