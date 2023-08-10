@@ -102,6 +102,10 @@ const init = (form: HTMLFormElement): boolean => {
 
       }
 
+      if (input.dataset.input == 'select') {
+        if (input.value === 'empty') inputError()
+      }
+
       input.addEventListener('input', ((): void => {
 
         if (input.value.length > 0) {
