@@ -1,5 +1,5 @@
 import { coordinates } from './functions/coordinates'
-import { throttle } from 'throttle-debounce';
+import { throttle } from 'throttle-debounce'
 
 const init = (): void => {
   const body = document.body as HTMLBodyElement

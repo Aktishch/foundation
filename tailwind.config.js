@@ -3,17 +3,17 @@
 module.exports = {
 
   content: [
-
     './src/**/*.html',
     './src/ts/**/*.ts',
     './src/lib/**/*.js'
-
   ],
 
   corePlugins: {
-
     container: false
+  },
 
+  future: {
+    hoverOnlyWhenSupported: true,
   },
 
   theme: {

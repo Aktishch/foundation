@@ -60,10 +60,10 @@
     <div class="absolute inset-0 flex items-center justify-end">
       <picture>
         <source srcset="img/pictures/build.webp" type="image/webp">
-        <img class="main__bg block relative right-[-15px] xs:right-0 w-[375px] xs:w-full xl:w-[910px] max-w-none" data-lag="0.2" src="img/pictures/build.png" alt="">
+        <img class="main__bg block relative right-[-15px] xs:right-0 w-[375px] xs:w-full xl:w-[910px] max-w-none" src="img/pictures/build.png" alt="">
       </picture>
       <div class="absolute top-8 xs:top-16 md:top-24 xl:top-20 left-3 xs:-left-6 md:left-0 xl:-left-10 rotate-[8deg] xs:rotate-[17deg]">
-        <div class="main__item main__item--blue flex items-center justify-center relative font-normal bg-blue text-white text-12 md:text-14 rounded-[100px] w-max py-3 xs:py-4 px-4 md:px-6" data-waved="dark" data-lag="0.4">
+        <div class="main__item main__item--blue flex items-center justify-center relative font-normal bg-blue text-white text-12 md:text-14 rounded-[100px] w-max py-3 xs:py-4 px-4 md:px-6" data-waved="dark">
           Cтроим фундамент за 8 дней
           <svg class="absolute icon -top-4 -right-3 text-blue text-26">
             <use xlink:href="img/icons.svg#arrow-to">
@@ -71,7 +71,7 @@
         </div>
       </div>
       <div class="absolute bottom-3 xs:bottom-12 md:bottom-16 lg:bottom-28 right-3 xs:left-56 md:left-72 lg:left-96 xl:left-48 -rotate-6">
-        <div class="main__item main__item--orange flex items-center justify-center relative font-normal bg-orange text-white text-12 md:text-14 rounded-[100px] w-max py-3 xs:py-4 px-4 md:px-6" data-waved="dark" data-lag="0.4">
+        <div class="main__item main__item--orange flex items-center justify-center relative font-normal bg-orange text-white text-12 md:text-14 rounded-[100px] w-max py-3 xs:py-4 px-4 md:px-6" data-waved="dark">
           Гарантия на любой фундамент
           <svg class="absolute icon -top-4 -left-3 text-orange text-26 -scale-x-100">
             <use xlink:href="img/icons.svg#arrow-to">
@@ -95,14 +95,14 @@
   </picture>
   <div class="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center lg:gap-10">
     <div class="flex flex-col">
-      <h2 class="mb-4 font-medium leading-3 uppercase calculation__title font-alt text-26 md:text-32 lg:text-42 lg:mb-12" data-speed="1.1">
+      <h2 class="mb-4 font-medium leading-3 uppercase calculation__title font-alt text-26 md:text-32 lg:text-42 lg:mb-12">
         Рассчитайте <br>
         <span class="font-extrabold">предварительную <br>
         стоимость</span> фундамента
       </h2>
-      <h3 class="mb-8 font-semibold calculation__subtitle text-16 md:text-18 lg:text-20 lg:mb-16" data-speed="1.1">Заполнив небольшую форму, вы получите:</h3>
+      <h3 class="mb-8 font-semibold calculation__subtitle text-16 md:text-18 lg:text-20 lg:mb-16">Заполнив небольшую форму, вы получите:</h3>
       <div class="flex flex-col gap-3 lg:items-start md:gap-5 lg:gap-10">
-        <div class="flex items-center py-2 pl-2 pr-10 bg-white shadow-sm calculation__item rounded-4 lg:ml-12" data-speed="1.1">
+        <div class="flex items-center py-2 pl-2 pr-10 bg-white shadow-sm calculation__item rounded-4 lg:ml-12">
           <div class="calculation__image flex items-center justify-center bg-primary rounded-4 md:rounded-6 min-w-[52px] w-[52px] h-[52px] md:min-w-[64px] md:w-[64px] md:h-[64px] mr-4 md:mr-6">
             <svg class="text-white icon text-32">
               <use xlink:href="img/icons.svg#crown">
@@ -113,7 +113,7 @@
             <span class="font-normal leading-4 text-12 md:text-14">Предоставим точный и понятный сметный расчет</span>
           </div>
         </div>
-        <div class="flex items-center py-2 pl-2 pr-10 bg-white shadow-sm calculation__item rounded-4" data-speed="1.1">
+        <div class="flex items-center py-2 pl-2 pr-10 bg-white shadow-sm calculation__item rounded-4">
           <div class="calculation__image flex items-center justify-center bg-primary rounded-4 md:rounded-6 min-w-[52px] w-[52px] h-[52px] md:min-w-[64px] md:w-[64px] md:h-[64px] mr-4 md:mr-6">
             <svg class="text-white icon text-32">
               <use xlink:href="img/icons.svg#crown">
@@ -124,7 +124,7 @@
             <span class="font-normal leading-4 text-12 md:text-14">Предоставим точный и понятный сметный расчет</span>
           </div>
         </div>
-        <div class="flex items-center py-2 pl-2 pr-10 bg-white shadow-sm calculation__item rounded-4 lg:ml-12" data-speed="1.1">
+        <div class="flex items-center py-2 pl-2 pr-10 bg-white shadow-sm calculation__item rounded-4 lg:ml-12">
           <div class="calculation__image flex items-center justify-center bg-primary rounded-4 md:rounded-6 min-w-[52px] w-[52px] h-[52px] md:min-w-[64px] md:w-[64px] md:h-[64px] mr-4 md:mr-6">
             <svg class="text-white icon text-32">
               <use xlink:href="img/icons.svg#crown">
@@ -240,51 +240,6 @@
             <span class="form-error" data-error>Пожалуйста, укажите стены!</span>
           </div>
         </label>
-        <!-- <label class="mb-4 form-label" data-label="input">
-          <span class="mb-2 font-semibold text-14">Стены сооружения</span>
-          <div class="form-wrapper">
-            <div class="input-cover">
-              <input class="input h-[38px]" data-input type="text" name="">
-            </div>
-            <span class="form-error" data-error>Пожалуйста, укажите стены!</span>
-          </div>
-        </label>
-        <label class="mb-5 form-label" data-label="input">
-          <span class="mb-2 font-semibold text-14">Этажей</span>
-          <div class="form-wrapper">
-            <div class="input-cover">
-              <input class="input h-[38px]" data-input="number" type="text" name="number">
-            </div>
-            <span class="form-error" data-error>Пожалуйста, укажите количество этажей!</span>
-          </div>
-        </label>
-        <div class="flex flex-col items-start gap-3 mb-4">
-          <label class="flex items-center link-wrapper">
-            <input class="switch switch--checkbox" type="checkbox" value="Гидроизоляция фундамента" name="checkbox[]">
-            <span class="ml-2 font-normal link text-14">Гидроизоляция фундамента</span>
-          </label>
-          <label class="flex items-center link-wrapper">
-            <input class="switch switch--checkbox" type="checkbox" value="Разводка коммуникаций" name="checkbox[]">
-            <span class="ml-2 font-normal link text-14">Разводка коммуникаций</span>
-          </label>
-          <label class="flex items-center link-wrapper">
-            <input class="switch switch--checkbox" type="checkbox" value="Утепление фундамента" name="checkbox[]">
-            <span class="ml-2 font-normal link text-14">Утепление фундамента</span>
-          </label>
-          <label class="flex items-center link-wrapper">
-            <input class="switch switch--checkbox" type="checkbox" value="Устройство отмостки" name="checkbox[]">
-            <span class="ml-2 font-normal link text-14">Устройство отмостки</span>
-          </label>
-        </div>
-        <label class="mb-6 form-label" data-label="input">
-          <span class="mb-2 font-semibold text-14">Комментарий, адрес и подробности</span>
-          <div class="form-wrapper">
-            <div class="input-cover">
-              <textarea class="input h-[60px]" data-input="text" type="text" name="text"></textarea>
-            </div>
-            <span class="form-error" data-error>Пожалуйста, заполните поле!</span>
-          </div>
-        </label> -->
         <button class="px-1 mb-6 btn btn-primary btn-lg btn-fill sm:px-10" data-waved="light" type="submit">Получить расчет фундамента</button>
         <div class="flex items-center justify-between gap-1">
           <div class="flex flex-col">
@@ -359,16 +314,16 @@
     </div>
   </div>
   <div class="order-1 lg:order-2 w-full lg:max-w-[550px]">
-    <p class="mb-4 font-normal leading-4 project__text text-14 sm:text-16 sm:mb-6" data-speed="1.1">
+    <p class="mb-4 font-normal leading-4 project__text text-14 sm:text-16 sm:mb-6">
       Наша практика показывает, что более 90% проектов будущих домов содержат ошибки, просчеты и требуют доработки
     </p>
-    <h2 class="mb-6 font-medium leading-3 project__title font-alt text-26 md:text-36" data-speed="1.1">
+    <h2 class="mb-6 font-medium leading-3 project__title font-alt text-26 md:text-36">
       Присылайте ваш проект к нам на анализ, мы проверим его <span class="font-extrabold">уже сегодня</span>
     </h2>
-    <p class="mb-6 font-normal leading-4 project__text text-14 sm:text-16 sm:mb-8" data-speed="1.1">
+    <p class="mb-6 font-normal leading-4 project__text text-14 sm:text-16 sm:mb-8">
       Проведем полную проверку согласно всем нормативам и предложим корректировки на начальной стадии строительства
     </p>
-    <div class="project__content rounded-6 lg:rounded-[48px] w-full md:max-w-[410px] py-10 px-5 md:px-10 mx-auto lg:mx-0" data-speed="1.1">
+    <div class="project__content rounded-6 lg:rounded-[48px] w-full md:max-w-[410px] py-10 px-5 md:px-10 mx-auto lg:mx-0">
       <form class="text-white form" data-form="submit" data-files>
         <p class="mb-4 font-semibold leading-4 text-16">Прикрепите сканы или сделайте фотографии крупным планом</p>
         <div class="mb-5 form-wrapper" data-label="download">
@@ -408,76 +363,100 @@
     Занимаемся <br class="sm:hidden"> строительством <br class="xl:hidden"> <span class="font-extrabold">с 2015 года</span>
   </h2>
   <h3 class="mb-10 font-normal leading-4 construction__subtitle sm:text-center text-16 lg:mb-12">Учитываем все пожелания и строго соблюдаем нормативы</h3>
-  <div data-filter>
-    <div class="construction__btns hidden sm:flex items-center justify-between gap-2 bg-primary bg-opacity-20 rounded-[100px] w-max p-1 mx-auto mb-6 lg:mb-12">
-      <button class="text-black construction__category filter-active btn btn-primary btn-lg" data-filter-category="category-1" data-waved="dark">Фундаменты</button>
-      <button class="text-black construction__category btn btn-primary btn-lg" data-filter-category="category-2" data-waved="dark">Дома под ключ</button>
-    </div>
-    <h4 class="mb-6 font-bold uppercase sm:hidden text-20">ФУНДАМЕНТЫ</h4>
-    <div class="relative mb-6 construction-slider sm:mb-0" data-filter-card="category-1">
-      <div class="overflow-visible swiper swiper--overwrap">
-        <div class="flex construction-wrapper swiper-wrapper sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 lg:gap-8">
-          <% for (var i = 0; i < 6; i++) { %>
-            <div class="h-auto swiper-slide">
-              <div class="h-full construction__item">
-                <div class="h-full card" data-waved="dark">
-                  <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
-                    <div class="loader">
-                      <span class="loader-progress">
-                        <svg class="loader-icon icon">
-                          <use xlink:href="img/icons.svg#loader">
-                        </svg>
-                      </span>
-                    </div>
-                    <picture>
-                      <source srcset="img/pictures/foundation.webp" type="image/webp">
-                      <img class="image" loading="lazy" src="img/pictures/foundation.jpg" alt="">
-                    </picture>
-                  </div>
-                  <div class="px-4 pt-4 pb-6 card-content">
-                    <p class="mb-1 font-semibold text-16">Проект А 10</p>
-                    <p class="mb-3 font-normal text-16 opacity-60">Общая площадь 55 м<sup>2</sup></p>
-                    <p class="mt-auto font-semibold text-20">2 300 000 ₽</p>
-                  </div>
+  <button class="lg:hidden btn btn-primary btn-lg btn-fill w-full sm:w-max mb-6" data-waved="light" data-sidebar-open="catalog">Открыть фильтр</button>
+  <div class="flex justify-between lg:gap-6">
+    <div class="construction__sidebar fixed lg:static z-3 lg:z-0 inset-0 invisible lg:visible overflow-auto lg:overflow-visible w-full lg:max-w-[275px]" data-sidebar="close" data-sidebar-resize="lg" id="catalog">
+      <form class="construction__form form opacity-0 lg:opacity-100 w-full max-w-[375px] lg:max-w-full min-h-full duration-3">
+        <div class="card flex-grow lg:flex-grow-0 bg-white lg:bg-opacity-50 rounded-none lg:rounded-8 shadow-none pt-8 pb-8 lg:pb-4 px-4">
+          <div class="flex lg:hidden items-center justify-between mb-7">
+            <h4 class="font-alt font-bold text-24 leading-1">Фильтр</h4>
+            <button class="btn btn-black text-22" data-sidebar-close="catalog" data-waved="light" type="button">
+              <svg class="icon">
+                <use xlink:href="img/icons.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="card-content gap-3 lg:gap-5 mb-7 lg:mb-10">
+            <% for (var i = 0; i < 4; i++) { %>
+            <div class="construction__accordion border-t first:border-0 border-solid border-gray border-opacity-60 pt-3 lg:pt-5 first:pt-0" data-accordion="active">
+              <div class="flex items-center justify-between gap-2 relative cursor-pointer" data-accordion-toggle data-waved="dark">
+                <h4 class="font-alt font-bold text-18 lg:text-22 leading-2">Подборки</h4>
+                <svg class="construction__arrow icon text-12 lg:text-14 duration-3">
+                  <use xlink:href="img/icons.svg#arrow-right"></use>
+                </svg>
+              </div>
+              <div data-accordion-content>
+                <div class="flex flex-col gap-4 pl-2 pt-3 lg:pt-5 pb-1">
+                  <% for (var j = 0; j < 6; j++) { %>
+                  <label class="flex items-center cursor-pointer">
+                    <input class="switch switch--radio mr-2" type="radio" name="radio">
+                    <span class="font-normal text-14 leading-2">С панорамными окнами</span>
+                  </label>
+                  <% } %>
                 </div>
               </div>
             </div>
-          <% } %>
+            <% } %>
+          </div>
+          <div class="flex flex-col gap-4">
+            <button class="btn btn-primary btn-lg btn-fill" data-waved="light" type="submit">Применить</button>
+            <button class="btn btn-gray btn-lg btn-contur text-black" data-waved="dark" type="reset">Сбросить</button>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
-    <h4 class="mb-6 font-bold uppercase sm:hidden text-20">ДОМА ПОД КЛЮЧ</h4>
-    <div class="relative construction-slider sm:hidden" data-filter-card="category-2">
-      <div class="overflow-visible swiper swiper--overwrap">
-        <div class="flex construction-wrapper swiper-wrapper sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 lg:gap-8">
-          <% for (var i = 0; i < 6; i++) { %>
-            <div class="h-auto swiper-slide">
-              <div class="h-full construction__item">
-                <div class="h-full card" data-waved="dark">
-                  <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
-                    <div class="loader">
-                      <span class="loader-progress">
-                        <svg class="loader-icon icon">
-                          <use xlink:href="img/icons.svg#loader">
-                        </svg>
-                      </span>
-                    </div>
-                    <picture>
-                      <source srcset="img/pictures/foundation.webp" type="image/webp">
-                      <img class="image" src="img/pictures/foundation.jpg" alt="">
-                    </picture>
-                  </div>
-                  <div class="px-4 pt-4 pb-6 card-content">
-                    <p class="mb-1 font-semibold text-16">Проект А 10</p>
-                    <p class="mb-3 font-normal text-16 opacity-60">Общая площадь 55 м<sup>2</sup></p>
-                    <p class="mt-auto font-semibold text-20">2 300 000 ₽</p>
-                  </div>
+    <div class="w-full lg:max-w-[875px]" data-listing>
+      <div class="grid grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
+        <% for (var i = 0; i < 9; i++) { %>
+          <div class="h-full construction__item">
+            <div class="h-full card" data-waved="dark">
+              <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
+                <div class="loader">
+                  <span class="loader-progress">
+                    <svg class="loader-icon icon">
+                      <use xlink:href="img/icons.svg#loader">
+                    </svg>
+                  </span>
                 </div>
+                <picture>
+                  <source srcset="img/pictures/foundation.webp" type="image/webp">
+                  <img class="image" loading="lazy" src="img/pictures/foundation.jpg" alt="">
+                </picture>
+              </div>
+              <div class="px-2 sm:px-4 pt-4 pb-4 sm:pb-6 card-content">
+                <p class="mb-1 font-semibold text-14 sm:text-16">Проект А 10</p>
+                <p class="mb-3 font-normal text-12 sm:text-16 opacity-60">Общая площадь 55 м<sup>2</sup></p>
+                <p class="mt-auto font-semibold text-16 sm:text-20">2 300 000 ₽</p>
               </div>
             </div>
-          <% } %>
-        </div>
+          </div>
+        <% } %>
+        <% for (var i = 0; i < 5; i++) { %>
+          <div class="h-full construction__item hidden" data-listing-item>
+            <div class="h-full card" data-waved="dark">
+              <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
+                <div class="loader">
+                  <span class="loader-progress">
+                    <svg class="loader-icon icon">
+                      <use xlink:href="img/icons.svg#loader">
+                    </svg>
+                  </span>
+                </div>
+                <picture>
+                  <source srcset="img/pictures/foundation.webp" type="image/webp">
+                  <img class="image" loading="lazy" src="img/pictures/foundation.jpg" alt="">
+                </picture>
+              </div>
+              <div class="px-2 sm:px-4 pt-4 pb-4 sm:pb-6 card-content">
+                <p class="mb-1 font-semibold text-14 sm:text-16">Проект А 10</p>
+                <p class="mb-3 font-normal text-12 sm:text-16 opacity-60">Общая площадь 55 м<sup>2</sup></p>
+                <p class="mt-auto font-semibold text-16 sm:text-20">2 300 000 ₽</p>
+              </div>
+            </div>
+          </div>
+        <% } %>
       </div>
+      <button class="btn btn-primary btn-lg btn-fill w-full sm:max-w-[245px] mt-8" data-listing-show data-waved="light">Показать еще</button>
     </div>
   </div>
 </section>
@@ -645,7 +624,7 @@
       <div class="specialist__circle absolute top-[60%] xs:top-[50%] md:-top-[43%] left-[-55%] sm:left-[-28%] md:left-auto md:-right-[63%] lg:-right-[35%] xl:-right-[25%] rounded-max w-[730px] h-[730px] md:w-[890px] md:h-[890px] my-0"></div>
       <picture>
         <source srcset="img/pictures/roulette.webp" type="image/webp">
-        <img class="hidden xl:block absolute top-[50%] left-[43%] -translate-x-[50%] -translate-y-[50%] w-full max-w-[490px]" data-lag="0.2" src="img/pictures/roulette.png" alt="">
+        <img class="hidden xl:block absolute top-[50%] left-[43%] -translate-x-[50%] -translate-y-[50%] w-full max-w-[490px]" src="img/pictures/roulette.png" alt="">
       </picture>
     </div>
     <div class="relative flex flex-col gap-20 p-6 md:flex-row md:items-center md:justify-between md:gap-5 lg:p-14">
@@ -725,7 +704,7 @@
 <!-- О нас -->
 
 <section class="container pb-0 bg-white about">
-  <h2 class="font-medium leading-3 about__title xl:hidden font-alt text-26 md:text-32 lg:text-42 mb-14" data-speed="1.1">
+  <h2 class="font-medium leading-3 about__title xl:hidden font-alt text-26 md:text-32 lg:text-42 mb-14">
     Доверьте <span class="font-extrabold">строительство
     фундамента</span> для вашего
     дома команде Кравченко
@@ -769,21 +748,21 @@
       </div>
     </div>
     <div class="flex flex-col items-start w-full lg:max-w-[560px]">
-      <h2 class="hidden mb-6 font-medium leading-3 about__title xl:block font-alt text-26 md:text-32 lg:text-42" data-speed="1.1">
+      <h2 class="hidden mb-6 font-medium leading-3 about__title xl:block font-alt text-26 md:text-32 lg:text-42">
         Доверьте <span class="font-extrabold">строительство
         фундамента</span> для вашего
         дома команде Кравченко
       </h2>
-      <p class="mb-8 font-semibold leading-4 text-16 md:mb-5" data-speed="1.1">
+      <p class="mb-8 font-semibold leading-4 text-16 md:mb-5">
         Уже больше 5 лет я помогаю людям и являюсь самым популярным экспертом в сфере недвижимости, строительства и ремонта в Краснодаре. 
       </p>
-      <p class="mb-8 leading-4 text-14 md:mb-5" data-speed="1.1">
+      <p class="mb-8 leading-4 text-14 md:mb-5">
         Я завязал доверие к своей команде на личной гарантии. И к выбору сотрудников в команду подхожу крайне избирательно. Я достаточно строг с коллективом, и те, кто подводит клиентов, меня и мою команду, покидают наши ряды немедленно и навсегда. Таким образом, Вы всегда можете быть уверены, что, если человек в команде, значит он молодец и я за него ручаюсь.
       </p>
-      <p class="mb-8 font-bold leading-4 text-18 md:text-20 md:mb-5" data-speed="1.1">
+      <p class="mb-8 font-bold leading-4 text-18 md:text-20 md:mb-5">
         Комплекс работ при проектировании и строительстве фундаментов и частных домов
       </p>
-      <ul class="flex flex-col items-start gap-3" data-speed="1.1">
+      <ul class="flex flex-col items-start gap-3">
         <li class="flex sm:items-center">
           <svg class="mt-1 mr-2 icon text-peach text-16 sm:mt-0">
             <use xlink:href="img/icons.svg#check">
@@ -946,13 +925,13 @@
 <!-- Вопросы -->
 
 <section class="container bg-white questions">
-  <h2 class="mb-2 font-medium leading-3 uppercase questions__title font-alt md:text-center text-26 md:text-32 lg:text-42 sm:mb-7 lg:mb-10" data-speed="1.1">
+  <h2 class="mb-2 font-medium leading-3 uppercase questions__title font-alt md:text-center text-26 md:text-32 lg:text-42 sm:mb-7 lg:mb-10">
     Возможно у вас <span class="font-extrabold">остались вопросы</span>
   </h2>
   <div class="grid xl:grid-cols-2 xl:gap-12">
     <div class="flex flex-col xl:gap-12">
       <% for (var i = 0; i < 3; i++) { %>
-        <div class="py-4 border-b border-solid questions__accordion border-b-black border-opacity-30 sm:py-6" data-accordion="hidden" data-speed="1.1">
+        <div class="py-4 border-b border-solid questions__accordion border-b-black border-opacity-30 sm:py-6" data-accordion="hidden">
           <div class="flex items-center justify-between gap-5 link-wrapper" data-accordion-toggle>
             <div class="flex items-center">
               <svg class="mr-3 icon text-peach text-28 sm:mr-5">
@@ -974,7 +953,7 @@
     </div>
     <div class="flex flex-col xl:gap-12">
       <% for (var i = 0; i < 3; i++) { %>
-        <div class="py-4 border-b border-solid questions__accordion border-b-black border-opacity-30 sm:py-6" data-accordion="hidden" data-speed="1.1">
+        <div class="py-4 border-b border-solid questions__accordion border-b-black border-opacity-30 sm:py-6" data-accordion="hidden">
           <div class="flex items-center justify-between gap-5 link-wrapper" data-accordion-toggle>
             <div class="flex items-center">
               <svg class="mr-3 icon text-peach text-28 sm:mr-5">

@@ -43,26 +43,6 @@ const init = () => {
 
   })
 
-  const constructionSlider = new Swiper('.construction-slider .swiper', {
-
-    slidesPerView: 1.1,
-    spaceBetween: 16,
-    speed: 500,
-
-    breakpoints: {
-
-      [media.sm]: {
-
-        slidesPerView: 'auto',
-        spaceBetween: 0,
-        allowTouchMove: false
-
-      }
-
-    }
-
-  })
-
   const servicesSlider = new Swiper('.services-slider .swiper', {
 
     slidesPerView: 1.2,

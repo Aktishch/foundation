@@ -5,17 +5,17 @@ import sliderSwiper from './lib/slider-swiper'
 import gsap from './lib/gsap'
 
 // Scripts
-import mobileMenu from './ts/mobile-menu'
+import sidebar from './ts/sidebar'
 import scrollTo from './ts/scroll-to'
 import waved from './ts/waved'
 import accordion from './ts/accordion'
 import parallax from './ts/parallax'
-import filter from './ts/filter'
 import downloadFiles from './ts/download-files'
 import formSubmit from './ts/form-submit'
 import formInputs from './ts/form-inputs'
 import maskTel from './ts/mask-tel'
 import preloader from './ts/preloader'
+import listing from './ts/listing'
 
 // Style
 import './scss/index.scss'
@@ -25,16 +25,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
   fancybox.init()
   sliderSwiper.init()
-  mobileMenu.init()
+  sidebar.init()
   scrollTo.init()
   waved.init()
   accordion.init()
   parallax.init()
-  filter.init()
   const datafiles =  downloadFiles.init()
   formSubmit.init(datafiles)
   formInputs.init()
   maskTel.init()
+  listing.init()
 
 })
 

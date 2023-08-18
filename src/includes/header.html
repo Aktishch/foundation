@@ -28,7 +28,7 @@
   <!-- Шапка документа -->
 
   <header class="container flex items-center justify-between gap-5 fixed z-3 top-0 left-0 right-0 bg-white md:bg-grey md:bg-opacity-70 backdrop-blur-sm py-4" data-header>
-    <button class="btn btn-primary btn-light xl:hidden text-32 rounded-2 shadow-sm p-1" data-burger data-waved="dark">
+    <button class="btn btn-primary btn-light xl:hidden text-32 rounded-2 shadow-sm p-1" data-sidebar-open="menu" data-waved="dark">
       <svg class="icon">
         <use xlink:href="img/icons.svg#burger">
       </svg>
@@ -67,7 +67,7 @@
 
   <!-- Мобильное меню -->
 
-  <div class="mobile-menu fixed inset-0 z-6 duration-1" data-mobile="hidden">
+  <div class="mobile-menu fixed inset-0 z-6 duration-1" data-sidebar="close" data-sidebar-resize="xl" id="menu">
     <div class="mobile-menu__content flex flex-col bg-white overflow-auto w-full max-w-[375px] h-full p-5 duration-3">
       <div class="mobile-menu__head relative mb-10 duration-5 delay-3">
         <div class="flex items-center justify-between gap-2 mb-6">
@@ -77,7 +77,7 @@
               <img class="w-full" src="img/pictures/logo.png" alt="">
             </picture>
           </a>
-          <button class="btn btn-primary btn-light text-24 rounded-2 shadow-sm p-2" data-mobile-close data-waved="dark">
+          <button class="btn btn-primary btn-light text-24 rounded-2 shadow-sm p-2" data-sidebar-close="menu" data-waved="dark">
             <svg class="icon">
               <use xlink:href="img/icons.svg#close">
             </svg>
@@ -116,6 +116,3 @@
       </div>
     </div>
   </div>
-
-  <div id="smooth-wrapper">
-    <div id="smooth-content">

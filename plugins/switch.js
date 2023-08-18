@@ -14,9 +14,14 @@ module.exports = plugin(
         position: 'relative',
         userSelect: 'none',
         color: theme('colors.primary.DEFAULT'),
-        backgroundColor: theme('colors.white.DEFAULT'),
-        border: `1px solid ${theme('colors.gray.DEFAULT')}`,
+        background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 18.23%, rgba(0, 0, 0, 0.10) 100%), #FFF',
+        border: `1px solid ${formatColor({
+          mode: 'rgba',
+          color: parseColor(theme('colors.gray.DEFAULT')).color,
+          alpha: 0.5,
+        })}`,
         transition: '0.2s linear',
+        appearance: 'none',
         cursor: 'pointer',
 
         '&--checkbox': {
@@ -46,29 +51,29 @@ module.exports = plugin(
         },
 
         '&--radio': {
-          minWidth: '20px',
-          width: '20px',
-          height: '20px',
+          minWidth: '16px',
+          width: '16px',
+          height: '16px',
           borderRadius: '50%',
-
+  
           '&::after': {
             content: '""',
             display: 'block',
-            width: '12px',
-            height: '12px',
+            width: '8px',
+            height: '8px',
             backgroundColor: 'currentColor',
             borderRadius: 'inherit',
             transform: 'scale(0)',
             transition: 'opacity 0.1s linear, transform 0.1s linear',
-            opacity: 0
+            opacity: 0,
           },
-
+  
           '&:checked': {
             '&::after': {
               opacity: 1,
-              transform: 'scale(1)'
-            }
-          }
+              transform: 'scale(1)',
+            },
+          },
         },
 
         '&--toggle': {

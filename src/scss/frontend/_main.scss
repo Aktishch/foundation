@@ -4,52 +4,52 @@
     box-shadow: 0 0 0 100vw theme("colors.black.DEFAULT / 50%");
   }
 
-  &:not([data-mobile="open"]) {
+  &[data-sidebar="close"] {
     opacity   : 0;
     visibility: hidden;
   }
 
-  &:not([data-mobile="open"]) &__content {
+  &[data-sidebar="close"] &__content {
     transform : translateX(-100%);
     opacity   : 0;
     visibility: hidden;
   }
 
-  &:not([data-mobile="open"]) &__head {
+  &[data-sidebar="close"] &__head {
     transform: translateY(-80px);
   }
 
-  &:not([data-mobile="open"]) &__nav {
+  &[data-sidebar="close"] &__nav {
     transform: translateX(-220px);
     opacity  : 0;
   }
 
-  &:not([data-mobile="open"]) &__footer {
+  &[data-sidebar="close"] &__footer {
     transform: translateY(-50px);
     opacity  : 0;
   }
 
-  &[data-mobile="open"] {
+  &[data-sidebar="open"] {
     opacity   : 1;
     visibility: visible;
   }
 
-  &[data-mobile="open"] &__content {
+  &[data-sidebar="open"] &__content {
     transform : translateX(0);
     opacity   : 1;
     visibility: visible;
   }
 
-  &[data-mobile="open"] &__head {
+  &[data-sidebar="open"] &__head {
     transform: translateY(0);
   }
 
-  &[data-mobile="open"] &__nav {
+  &[data-sidebar="open"] &__nav {
     transform: translateX(0);
     opacity  : 1;
   }
 
-  &[data-mobile="open"] &__footer {
+  &[data-sidebar="open"] &__footer {
     transform: translateY(0);
     opacity  : 1;
   }
@@ -171,18 +171,30 @@
 
 // Строительство
 .construction {
-  &__category.filter-active {
-    @apply text-white bg-primary pointer-events-none;
-  }
-
-  &-slider.filter-show {
-    animation: filtering-show 0.3s ease both 1;
-  }
-
-  @screen sm {
-    &-wrapper {
-      transform: none !important;
+  &__accordion {
+    &[data-accordion="active"] .construction__arrow {
+      transform: rotate(-90deg);
     }
+  }
+
+  &__form {
+    box-shadow: 0 0 0 100vw theme("colors.black.DEFAULT / 50%");
+    transform : translateX(-375px);
+
+    @screen lg {
+      box-shadow: none;
+      transform : translateX(0);
+    }
+  }
+
+  &__sidebar[data-sidebar="open"] {
+    @apply visible;
+  }
+
+  &__sidebar[data-sidebar="open"] &__form {
+    transform: translateX(0);
+
+    @apply visible opacity-100;
   }
 }
 
