@@ -15,7 +15,7 @@ import formSubmit from './ts/form-submit'
 import formInputs from './ts/form-inputs'
 import maskTel from './ts/mask-tel'
 import preloader from './ts/preloader'
-import listing from './ts/listing'
+import filter from './ts/filter'
 
 // Style
 import './scss/index.scss'
@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
   formSubmit.init(datafiles)
   formInputs.init()
   maskTel.init()
-  listing.init()
+  filter.init()
 
 })
 

@@ -196,6 +196,10 @@
 
     @apply visible opacity-100;
   }
+
+  &__card.filter-show {
+    animation: filtering-show 0.3s ease both 1;
+  }
 }
 
 @keyframes filtering-show {

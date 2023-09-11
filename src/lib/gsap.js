@@ -207,37 +207,6 @@ const createAnimations = () => {
 
     })
 
-    gsap.from('.construction__btns', {
-
-      y: 50,
-      opacity: 0,
-      duration: 0.4,
-      scrollTrigger: {
-        trigger: '.construction',
-        start: 'top 80%',
-      }
-
-    })
-
-    const items = gsap.utils.toArray('.construction__item')
-
-    gsap.set(items, { transition: 'none' })
-
-    items.forEach((item, index) => {
-
-      gsap.from(item, {
-        xPercent: 30,
-        opacity: 0,
-        delay: index / 10,
-        duration: 0.6,
-        scrollTrigger: {
-          trigger: item.parentElement,
-          start: 'top 95%',
-        }
-      })
-
-    })
-
   }
 
   {

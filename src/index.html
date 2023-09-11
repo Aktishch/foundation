@@ -358,7 +358,121 @@
 
 <!-- Строительство -->
 
-<section class="container overflow-hidden construction bg-grey" id="construction">
+<% var catalog = [
+  {
+    title: 'Подборки',
+    name: 'compilations',
+    labels: [
+      {
+        category: 'foundation',
+        value: 'Фундаменты'
+      },
+      {
+        category: 'home',
+        value: 'Дома'
+      }
+    ]
+  },
+  {
+    title: 'Тип фундамента',
+    name: 'type',
+    labels: [
+      {
+        category: 'ribbon',
+        value: 'Ленточный'
+      },
+      {
+        category: 'plate',
+        value: 'Плитный'
+      }
+    ]
+  },
+  {
+    title: 'Ширина участка',
+    name: 'width',
+    labels: [
+      {
+        category: 'to-5',
+        value: 'До 5 соток'
+      },
+      {
+        category: 'to-10',
+        value: 'до 10 соток'
+      },
+      {
+        category: 'from-10',
+        value: 'больше 10 соток'
+      },
+      {
+        category: 'none',
+        value: 'еще нет участка'
+      }
+    ]
+  },
+  {
+    title: 'Площадь',
+    name: 'square',
+    labels: [
+      {
+        category: '100-m',
+        value: 'до 100 м<sup>2</sup>'
+      },
+      {
+        category: '150-m',
+        value: 'до 150 м<sup>2</sup>'
+      },
+      {
+        category: '200-m',
+        value: 'до 200 м<sup>2</sup>'
+      },
+      {
+        category: '300-m',
+        value: 'до 300 м<sup>2</sup>'
+      }
+    ]
+  },
+] %>
+
+<% var construction = [
+  {
+    card: 'foundation plate to-5',
+    name: 'Проект А 1',
+  },
+  {
+    card: 'home ribbon to-10',
+    name: 'Проект А 2',
+  },
+  {
+    card: 'foundation plate from-10',
+    name: 'Проект А 3',
+  },
+  {
+    card: 'home ribbon none',
+    name: 'Проект А 4',
+  },
+  {
+    card: 'foundation plate 100-m',
+    name: 'Проект А 5',
+  },
+    {
+    card: 'home ribbon 150-m',
+    name: 'Проект А 6',
+  },
+  {
+    card: 'foundation plate 300-m',
+    name: 'Проект А 7',
+  },
+  {
+    card: 'home ribbon 200-m',
+    name: 'Проект А 8',
+  },
+  {
+    card: 'foundation plate 300-m',
+    name: 'Проект А 9',
+  },
+] %>
+
+<section class="container overflow-hidden construction bg-grey" data-filter id="construction">
   <h2 class="mb-4 font-medium leading-3 uppercase construction__title font-alt sm:text-center text-26 md:text-32 lg:text-42">
     Занимаемся <br class="sm:hidden"> строительством <br class="xl:hidden"> <span class="font-extrabold">с 2015 года</span>
   </h2>
@@ -377,20 +491,20 @@
             </button>
           </div>
           <div class="card-content gap-3 lg:gap-5 mb-7 lg:mb-10">
-            <% for (var i = 0; i < 4; i++) { %>
+            <% for (var i = 0; i < catalog.length; i++) { %>
             <div class="construction__accordion border-t first:border-0 border-solid border-gray border-opacity-60 pt-3 lg:pt-5 first:pt-0" data-accordion="active">
               <div class="flex items-center justify-between gap-2 relative cursor-pointer" data-accordion-toggle data-waved="dark">
-                <h4 class="font-alt font-bold text-18 lg:text-22 leading-2">Подборки</h4>
+                <h4 class="font-alt font-bold text-18 lg:text-22 leading-2"><%= catalog[i].title %></h4>
                 <svg class="construction__arrow icon text-12 lg:text-14 duration-3">
                   <use xlink:href="img/icons.svg#arrow-right"></use>
                 </svg>
               </div>
               <div data-accordion-content>
                 <div class="flex flex-col gap-4 pl-2 pt-3 lg:pt-5 pb-1">
-                  <% for (var j = 0; j < 6; j++) { %>
+                  <% for (var j = 0; j < catalog[i].labels.length; j++) { %>
                   <label class="flex items-center cursor-pointer">
-                    <input class="switch switch--radio mr-2" type="radio" name="radio">
-                    <span class="font-normal text-14 leading-2">С панорамными окнами</span>
+                    <input class="switch switch--radio mr-2" data-filter-category="<%= catalog[i].labels[j].category %>" type="radio" name="<%= catalog[i].name %>">
+                    <span class="font-normal text-14 leading-2"><%= catalog[i].labels[j].value %></span>
                   </label>
                   <% } %>
                 </div>
@@ -399,16 +513,16 @@
             <% } %>
           </div>
           <div class="flex flex-col gap-4">
-            <button class="btn btn-primary btn-lg btn-fill" data-waved="light" type="submit">Применить</button>
-            <button class="btn btn-gray btn-lg btn-contur text-black" data-waved="dark" type="reset">Сбросить</button>
+            <button class="btn btn-primary btn-lg btn-fill" data-filter-btn="button" data-waved="light" type="button">Применить</button>
+            <button class="btn btn-gray btn-lg btn-contur text-black" data-filter-btn="reset" data-waved="dark" type="reset">Сбросить</button>
           </div>
         </div>
       </form>
     </div>
-    <div class="w-full lg:max-w-[875px]" data-listing>
+    <div class="w-full lg:max-w-[875px]">
       <div class="grid grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
-        <% for (var i = 0; i < 9; i++) { %>
-          <div class="h-full construction__item">
+        <% for (var i = 0; i < construction.length; i++) { %>
+          <div class="construction__card" data-filter-card="<%= construction[i].card %>">
             <div class="h-full card" data-waved="dark">
               <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
                 <div class="loader">
@@ -424,39 +538,13 @@
                 </picture>
               </div>
               <div class="px-2 sm:px-4 pt-4 pb-4 sm:pb-6 card-content">
-                <p class="mb-1 font-semibold text-14 sm:text-16">Проект А 10</p>
+                <p class="mb-1 font-semibold text-14 sm:text-16"><%= construction[i].name %></p>
                 <p class="mb-3 font-normal text-12 sm:text-16 opacity-60">Общая площадь 55 м<sup>2</sup></p>
                 <p class="mt-auto font-semibold text-16 sm:text-20">2 300 000 ₽</p>
               </div>
             </div>
           </div>
         <% } %>
-        <% for (var i = 0; i < 5; i++) { %>
-          <div class="h-full construction__item hidden" data-listing-item>
-            <div class="h-full card" data-waved="dark">
-              <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
-                <div class="loader">
-                  <span class="loader-progress">
-                    <svg class="loader-icon icon">
-                      <use xlink:href="img/icons.svg#loader">
-                    </svg>
-                  </span>
-                </div>
-                <picture>
-                  <source srcset="img/pictures/foundation.webp" type="image/webp">
-                  <img class="image" loading="lazy" src="img/pictures/foundation.jpg" alt="">
-                </picture>
-              </div>
-              <div class="px-2 sm:px-4 pt-4 pb-4 sm:pb-6 card-content">
-                <p class="mb-1 font-semibold text-14 sm:text-16">Проект А 10</p>
-                <p class="mb-3 font-normal text-12 sm:text-16 opacity-60">Общая площадь 55 м<sup>2</sup></p>
-                <p class="mt-auto font-semibold text-16 sm:text-20">2 300 000 ₽</p>
-              </div>
-            </div>
-          </div>
-        <% } %>
-      </div>
-      <button class="btn btn-primary btn-lg btn-fill w-full sm:max-w-[245px] mt-8" data-listing-show data-waved="light">Показать еще</button>
     </div>
   </div>
 </section>
