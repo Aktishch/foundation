@@ -361,73 +361,77 @@
 <% var catalog = [
   {
     title: 'Подборки',
+    data: 'category',
     name: 'compilations',
     labels: [
       {
-        category: 'foundation',
-        value: 'Фундаменты'
+        value: 'foundation',
+        text: 'Фундаменты'
       },
       {
-        category: 'home',
-        value: 'Дома'
+        value: 'home',
+        text: 'Дома'
       }
     ]
   },
   {
     title: 'Тип фундамента',
+    data: 'category',
     name: 'type',
     labels: [
       {
-        category: 'ribbon',
-        value: 'Ленточный'
+        value: 'ribbon',
+        text: 'Ленточный'
       },
       {
-        category: 'plate',
-        value: 'Плитный'
+        value: 'plate',
+        text: 'Плитный'
       }
     ]
   },
   {
     title: 'Ширина участка',
+    data: 'width',
     name: 'width',
     labels: [
       {
-        category: 'to-5',
-        value: 'До 5 соток'
+        value: '5',
+        text: 'До 5 соток'
       },
       {
-        category: 'to-10',
-        value: 'до 10 соток'
+        value: '10',
+        text: 'до 10 соток'
       },
       {
-        category: 'from-10',
-        value: 'больше 10 соток'
+        value: '11',
+        text: 'больше 10 соток'
       },
       {
-        category: 'none',
-        value: 'еще нет участка'
+        value: '0',
+        text: 'еще нет участка'
       }
     ]
   },
   {
     title: 'Площадь',
+    data: 'square',
     name: 'square',
     labels: [
       {
-        category: '100-m',
-        value: 'до 100 м<sup>2</sup>'
+        value: '100',
+        text: 'до 100 м<sup>2</sup>'
       },
       {
-        category: '150-m',
-        value: 'до 150 м<sup>2</sup>'
+        value: '150',
+        text: 'до 150 м<sup>2</sup>'
       },
       {
-        category: '200-m',
-        value: 'до 200 м<sup>2</sup>'
+        value: '200',
+        text: 'до 200 м<sup>2</sup>'
       },
       {
-        category: '300-m',
-        value: 'до 300 м<sup>2</sup>'
+        value: '300',
+        text: 'до 300 м<sup>2</sup>'
       }
     ]
   },
@@ -435,39 +439,56 @@
 
 <% var construction = [
   {
-    card: 'foundation plate to-5',
+    card: 'foundation plate',
+    size: '3',
+    area: '50',
     name: 'Проект А 1',
   },
   {
-    card: 'home ribbon to-10',
+    card: 'home ribbon',
+    size: '5',
+    area: '80',
     name: 'Проект А 2',
   },
   {
-    card: 'foundation plate from-10',
+    card: 'foundation plate',
+    size: '3',
+    area: '100',
     name: 'Проект А 3',
   },
   {
-    card: 'home ribbon none',
+    card: 'home ribbon',
+    size: '7',
+    area: '120',
     name: 'Проект А 4',
   },
   {
-    card: 'foundation plate 100-m',
+    card: 'foundation plate',
+    size: '5',
+    area: '160',
     name: 'Проект А 5',
   },
     {
-    card: 'home ribbon 150-m',
+    card: 'home ribbon',
+    size: '4',
+    area: '200',
     name: 'Проект А 6',
   },
   {
-    card: 'foundation plate 300-m',
+    card: 'foundation plate',
+    size: '10',
+    area: '220',
     name: 'Проект А 7',
   },
   {
-    card: 'home ribbon 200-m',
+    card: 'home ribbon',
+    size: '12',
     name: 'Проект А 8',
   },
   {
-    card: 'foundation plate 300-m',
+    card: 'foundation plate',
+    size: '15',
+    area: '270',
     name: 'Проект А 9',
   },
 ] %>
@@ -503,8 +524,8 @@
                 <div class="flex flex-col gap-4 pl-2 pt-3 lg:pt-5 pb-1">
                   <% for (var j = 0; j < catalog[i].labels.length; j++) { %>
                   <label class="flex items-center cursor-pointer">
-                    <input class="switch switch--radio mr-2" data-filter-category="<%= catalog[i].labels[j].category %>" type="radio" name="<%= catalog[i].name %>">
-                    <span class="font-normal text-14 leading-2"><%= catalog[i].labels[j].value %></span>
+                    <input class="switch switch--radio mr-2" data-filter-<%= catalog[i].data %>="<%= catalog[i].labels[j].value %>" <%= j == 0 ? 'checked' : '' %> type="radio" name="<%= catalog[i].name %>">
+                    <span class="font-normal text-14 leading-2"><%= catalog[i].labels[j].text %></span>
                   </label>
                   <% } %>
                 </div>
@@ -522,7 +543,7 @@
     <div class="w-full lg:max-w-[875px]">
       <div class="grid grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
         <% for (var i = 0; i < construction.length; i++) { %>
-          <div class="construction__card" data-filter-card="<%= construction[i].card %>">
+          <div class="construction__card" data-filter-card="<%= construction[i].card %>" data-filter-size="<%= construction[i].size %>" data-filter-area="<%= construction[i].area %>">
             <div class="h-full card" data-waved="dark">
               <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
                 <div class="loader">
