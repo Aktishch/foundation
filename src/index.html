@@ -412,125 +412,80 @@
       }
     ]
   },
-  //{
-  //  title: 'Площадь',
-  //  data: 'square',
-  //  name: 'square',
-  //  labels: [
-  //    {
-  //      value: '100',
-  //      text: 'до 100 м<sup>2</sup>'
-  //    },
-  //    {
-  //      value: '150',
-  //      text: 'до 150 м<sup>2</sup>'
-  //    },
-  //    {
-  //      value: '200',
-  //      text: 'до 200 м<sup>2</sup>'
-  //    },
-  //    {
-  //      value: '300',
-  //      text: 'до 300 м<sup>2</sup>'
-  //    }
-  //  ]
-  //},
+  {
+    title: 'Площадь',
+    data: 'square',
+    name: 'square',
+    labels: [
+      {
+        value: '100',
+        text: 'до 100 м<sup>2</sup>'
+      },
+      {
+        value: '150',
+        text: 'до 150 м<sup>2</sup>'
+      },
+      {
+        value: '200',
+        text: 'до 200 м<sup>2</sup>'
+      },
+      {
+        value: '300',
+        text: 'до 300 м<sup>2</sup>'
+      }
+    ]
+  },
 ] %>
 
 <% var construction = [
   {
     name: 'foundation ribbon',
     width: '3',
+    square: '50',
     text: 'Проект А 1'
   },
   {
     name: 'home plate',
     width: '5',
+    square: '80',
     text: 'Проект А 2'
   },
   {
     name: 'foundation plate',
     width: '7',
+    square: '120',
     text: 'Проект А 3'
   },
   {
     name: 'home ribbon',
     width: '5',
+    square: '160',
     text: 'Проект А 4'
   },
   {
     name: 'foundation ribbon',
     width: '4',
+    square: '180',
     text: 'Проект А 5'
   },
   {
     name: 'home plate',
     width: '10',
+    square: '200',
     text: 'Проект А 6'
   },
   {
     name: 'foundation plate',
     width: '12',
+    square: '220',
     text: 'Проект А 7'
   },
   {
     name: 'home ribbon',
     width: '15',
+    square: '270',
     text: 'Проект А 8'
   },
-  //{
-  //  card: 'foundation plate',
-  //  size: '3',
-  //  area: '50',
-  //  name: 'Проект А 1',
-  //},
-  //{
-  //  card: 'home ribbon',
-  //  size: '5',
-  //  area: '80',
-  //  name: 'Проект А 2',
-  //},
-  //{
-  //  card: 'foundation plate',
-  //  size: '3',
-  //  area: '100',
-  //  name: 'Проект А 3',
-  //},
-  //{
-  //  card: 'home ribbon',
-  //  size: '7',
-  //  area: '120',
-  //  name: 'Проект А 4',
-  //},
-  //{
-  //  card: 'foundation plate',
-  //  size: '5',
-  //  area: '160',
-  //  name: 'Проект А 5',
-  //},
-  //  {
-  //  card: 'home ribbon',
-  //  size: '4',
-  //  area: '200',
-  //  name: 'Проект А 6',
-  //},
-  //{
-  //  card: 'foundation plate',
-  //  size: '10',
-  //  area: '220',
-  //  name: 'Проект А 7',
-  //},
-  //{
-  //  card: 'home ribbon',
-  //  size: '12',
-  //  name: 'Проект А 8',
-  //},
-  //{
-  //  card: 'foundation plate',
-  //  size: '15',
-  //  area: '270',
-  //  name: 'Проект А 9',
-  //},
 ] %>
 
 <section class="container overflow-hidden construction bg-grey" data-filter id="construction">
@@ -583,7 +538,7 @@
     <div class="w-full lg:max-w-[875px]">
       <div class="grid grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
         <% for (var i = 0; i < construction.length; i++) { %>
-          <div class="construction__card" data-filter-card data-filter-name="<%= construction[i].name %>" data-filter-width="<%= construction[i].width %>" data-filter-area="<%= construction[i].area %>">
+          <div class="construction__card" data-filter-card data-filter-name="<%= construction[i].name %>" data-filter-width="<%= construction[i].width %>" data-filter-square="<%= construction[i].square %>">
             <div class="h-full card" data-waved="dark">
               <div class="pack pack-rect-md sm:pack-rect-sm bg-grey">
                 <div class="loader">
